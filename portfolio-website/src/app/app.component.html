@@ -1,0 +1,16 @@
+<mat-toolbar>
+  <img id="logo" src="../assets/Images/web-logo.png">
+  <div id="nav-bar-container">
+    <button class="nav-buttons" mat-button>Overview</button>
+    <button mat-button class="nav-buttons" [matMenuTriggerFor]="menu">Projects</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>R</button>
+      <button mat-menu-item>C</button>
+      <button mat-menu-item>Python</button>
+      <button mat-menu-item>SQL</button>
+    </mat-menu>
+    <button class="nav-buttons" mat-button>Contact</button>
+  </div>
+
+</mat-toolbar>
+
