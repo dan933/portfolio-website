@@ -13,25 +13,118 @@
   background-color: white;
 }
 
+
 .nav-buttons
 {
-  font-size: 30px;
+  margin:10px !important;
+  font-size: 40px;
   width: auto;
-  height: auto;
-  margin: 100px;
+  height: 45px !important;
 }
+
 
 #nav-bar-container
 {
   margin-top: 250px;
 }
 
+//submenu panel for projects
 .mat-menu-panel
 {
   margin-left: 10px;
-  width: 115px;
+  width: 155px;
 }
 
-body {
+//space between nav bar and router outlet
+.nav-spacer
+{
+  margin-top:100px;
+  margin-bottom: 150px;
+}
+
+body
+{
   margin: 0;
+}
+
+.active
+{
+  background-color: gray;
+  color: white;
+}
+
+//center align heading
+.heading-center
+{
+  text-align: center;
+  font-weight: 0.5px !important;
+  font-size: 60px !important;
+  margin-bottom: 30px !important;
+}
+
+p
+{
+  font-size: 20px;
+  line-height: 30px;
+}
+
+
+
+.logos
+{
+  height: 70px;
+  width: auto;
+  align-self: center;
+}
+
+.img
+{
+  height: 300px;
+  width:  auto;
+  margin: 5px;
+  padding:4px;
+}
+
+.img-container
+{
+  height: auto;
+  width: auto;
+  text-align: left;
+  color: gray;
+}
+
+.container-center
+{
+  text-align: center;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+//grid classes
+.card
+{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-self: start;
+  align-items: center;
+}
+
+.basic-grid
+{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+}
+
+
+.border
+{
+  border: 0.5px solid black;
+  border-radius: 6px;
+}
+
+.caption
+{
+  width: auto;
 }

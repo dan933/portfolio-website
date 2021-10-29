@@ -7,10 +7,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //angular materials module
 import { AppMaterialModule } from './app-material/app-material.module';
+import { OverviewComponent } from './overview/overview.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    OverviewComponent
   ],
   imports: [
     BrowserModule,
