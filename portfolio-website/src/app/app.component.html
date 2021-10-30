@@ -1,44 +1,44 @@
-<div>
-  <!-- large navbar -->
-  <mat-toolbar id="large-nav-bar">
-    <img id="logo" src="../assets/Images/web-logo.png">
-    <div id="nav-bar-container">
-      <button class="nav-buttons" mat-button routerLink="/overview" routerLinkActive="active">Overview</button>
-      <button mat-button class="nav-buttons" [matMenuTriggerFor]="menu">Projects</button>
+<!-- large navbar -->
+<mat-drawer-container class="example-container" [hasBackdrop]="true">
+
+<mat-toolbar id="large-nav-bar">
+  <img id="logo" src="../assets/Images/web-logo.png">
+  <div id="nav-bar-container">
+    <button class="nav-buttons" mat-button routerLink="/overview" routerLinkActive="active">Overview</button>
+    <button mat-button class="nav-buttons" [matMenuTriggerFor]="menu">Projects</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>R</button>
+      <button mat-menu-item>C</button>
+      <button mat-menu-item>Python</button>
+      <button mat-menu-item>SQL</button>
+    </mat-menu>
+    <button class="nav-buttons" mat-button>Contact</button>
+  </div>
+</mat-toolbar>
+
+<!-- compact nav-bar -->
+
+  <mat-drawer #drawer mode="over">
+    <button class="compact-nav-buttons" mat-button routerLink="/overview" routerLinkActive="active">Overview</button>
+    <br>
+    <button mat-button class="compact-nav-buttons" [matMenuTriggerFor]="menu">Projects</button>
       <mat-menu #menu="matMenu">
         <button mat-menu-item>R</button>
         <button mat-menu-item>C</button>
         <button mat-menu-item>Python</button>
         <button mat-menu-item>SQL</button>
       </mat-menu>
-      <button class="nav-buttons" mat-button>Contact</button>
-    </div>
-  </mat-toolbar>
+      <br>
+      <button class="compact-nav-buttons" mat-button>Contact</button>
+  </mat-drawer>
 
-  <!-- compact nav-bar -->
-  <mat-toolbar id="compact-nav-bar">
-      <button mat-icon-button aria-label="Compact nav-bar">
-        <mat-icon>menu</mat-icon>
-      </button>
-    <img id="logo-compact" src="../assets/Images/web-logo.png">
-
-  </mat-toolbar>
-
-  <router-outlet></router-outlet>
-</div>
-
-<mat-toolbar color="primary">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>My App</span>
-  <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
-  </button>
+<mat-toolbar id="compact-nav-bar">
+    <button (click)="drawer.toggle()" mat-icon-button aria-label="Compact nav-bar">
+      <mat-icon>menu</mat-icon>
+    </button>
+  <img id="logo-compact" src="../assets/Images/web-logo.png">
 </mat-toolbar>
 
+<router-outlet></router-outlet>
 
+</mat-drawer-container>
