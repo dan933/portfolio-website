@@ -22,3 +22,16 @@
   flex-direction: column;
   align-items: flex-start;
 }
+
+#compact-nav-bar
+{
+  height: 100px;
+  position: fixed;
+  z-index: 2;
+}
+
+#logo-compact
+{
+  padding-left: 10px;
+  height: 80px;
+}

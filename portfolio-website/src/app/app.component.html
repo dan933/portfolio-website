@@ -16,9 +16,17 @@
   </div>
 </mat-toolbar>
 
+<mat-toolbar id="compact-nav-bar">
+    <button (click)="drawer.toggle()" mat-icon-button aria-label="Compact nav-bar">
+      <mat-icon>menu</mat-icon>
+    </button>
+  <img id="logo-compact" src="../assets/Images/web-logo.png">
+</mat-toolbar>
+
 <!-- compact nav-bar -->
 
   <mat-drawer #drawer mode="over">
+    <div style="margin-top:5px;"></div>
     <button class="compact-nav-buttons" mat-button routerLink="/overview" routerLinkActive="active">Overview</button>
     <br>
     <button mat-button class="compact-nav-buttons" [matMenuTriggerFor]="menu">Projects</button>
@@ -32,12 +40,7 @@
       <button class="compact-nav-buttons" mat-button>Contact</button>
   </mat-drawer>
 
-<mat-toolbar id="compact-nav-bar">
-    <button (click)="drawer.toggle()" mat-icon-button aria-label="Compact nav-bar">
-      <mat-icon>menu</mat-icon>
-    </button>
-  <img id="logo-compact" src="../assets/Images/web-logo.png">
-</mat-toolbar>
+
 
 <router-outlet></router-outlet>
 
