@@ -7,8 +7,8 @@
     <button class="nav-buttons" mat-button routerLink="/overview" routerLinkActive="active">Overview</button>
     <button mat-button class="nav-buttons" [matMenuTriggerFor]="menu">Projects</button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item>R</button>
-      <button mat-menu-item>C</button>
+      <button routerLink="/r-projects" routerLinkActive="active" mat-menu-item>R</button>
+      <button routerLink="/c-projects" routerLinkActive="active" mat-menu-item>C</button>
       <button mat-menu-item>Python</button>
       <button mat-menu-item>SQL</button>
     </mat-menu>
@@ -29,15 +29,15 @@
     <div style="margin-top:5px;"></div>
     <button class="compact-nav-buttons" mat-button routerLink="/overview" routerLinkActive="active">Overview</button>
     <br>
-    <button mat-button class="compact-nav-buttons" [matMenuTriggerFor]="menu">Projects</button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item>R</button>
-        <button mat-menu-item>C</button>
-        <button mat-menu-item>Python</button>
-        <button mat-menu-item>SQL</button>
-      </mat-menu>
-      <br>
-      <button class="compact-nav-buttons" mat-button>Contact</button>
+    <button (click)="toggle()" mat-button class="compact-nav-buttons">Projects</button>
+    <div *ngIf="show" id="sub-menu-projects">
+      <button class="compact-sub-menu" routerLink="/r-projects" routerLinkActive="active" mat-menu-item>R</button>
+      <button class="compact-sub-menu" routerLink="/c-projects" routerLinkActive="active" mat-menu-item>C</button>
+      <button class="compact-sub-menu" mat-menu-item>Python</button>
+      <button class="compact-sub-menu" mat-menu-item>SQL</button>
+    </div>
+    <br *ngIf="!show">
+    <button class="compact-nav-buttons" mat-button>Contact</button>
   </mat-drawer>
 
 

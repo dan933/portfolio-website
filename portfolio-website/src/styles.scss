@@ -1,54 +1,6 @@
-// logo style
-#logo
+.sub-nav
 {
-  padding-top: 100px;
-  height: 170px;
-  padding-right: 20px;
-}
-
-.mat-toolbar
-{
-  height: 170px;
-  padding: 0px;
-  background-color: white;
-  //background-color: black;
-}
-
-
-.nav-buttons
-{
-  margin:10px !important;
-  font-size: 40px;
-  width: auto;
-  height: 45px !important;
-}
-
-.compact-nav-buttons
-{
-  font-size: 30px;
-  width: 200px;
-  border-radius: 0px !important;
-}
-
-
-#nav-bar-container
-{
-  margin-top: 250px;
-  width: 100vw;
-}
-
-//submenu panel for projects
-.mat-menu-panel
-{
-  margin-left: 10px;
-  width: 155px;
-}
-
-//space between nav bar and router outlet
-.nav-spacer
-{
-  margin-top:100px;
-  margin-bottom: 150px;
+  background-color: gray;
 }
 
 body
@@ -87,6 +39,7 @@ p
 
 .img
 {
+  cursor: pointer;
   height: 300px;
   width:  auto;
   margin: 5px;
@@ -136,4 +89,26 @@ p
 .caption
 {
   width: auto;
+}
+
+//space between nav bar and router outlet
+.nav-spacer
+{
+  margin-top:100px;
+  margin-bottom: 150px;
+}
+
+.sub-nav
+{
+  background-color: lightgray;
+  border-radius: 5px;
+  width:99.5% !important;
+  margin-bottom: 25px !important;
+}
+
+.header-left
+{
+  font-size: 40px !important;
+  margin-bottom: 40px !important;
+  text-align: left !important;
 }

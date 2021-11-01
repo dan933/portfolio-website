@@ -35,3 +35,57 @@
   padding-left: 10px;
   height: 80px;
 }
+
+// logo style
+#logo
+{
+  margin-left: 15px;
+  padding-top: 100px;
+  height: 170px;
+  padding-right: 20px;
+}
+
+.compact-sub-menu
+{
+  padding-left: 30px;
+  font-size: 15px;
+}
+
+.mat-toolbar
+{
+  height: 100px;
+  padding: 0px;
+  background-color: white;
+  //background-color: black;
+}
+
+
+.nav-buttons
+{
+  margin:10px !important;
+  font-size: 40px;
+  width: auto;
+  height: 45px !important;
+}
+
+.compact-nav-buttons
+{
+  font-size: 30px;
+  width: 200px;
+  border-radius: 0px !important;
+  text-align: left !important;
+}
+
+
+#nav-bar-container
+{
+  margin-top: 250px;
+  width: 100vw;
+}
+
+//submenu panel for projects
+.mat-menu-panel
+{
+  margin-left: 10px;
+  width: 155px;
+}

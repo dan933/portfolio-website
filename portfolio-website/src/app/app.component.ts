@@ -8,4 +8,11 @@ import { AppMaterialModule } from './app-material/app-material.module';
 })
 export class AppComponent {
   title = 'Daniel Albert';
+  show = false;
+
+  toggle() {
+    this.show = this.show ? false : true
+
+    return this.show;
+  }
 }
