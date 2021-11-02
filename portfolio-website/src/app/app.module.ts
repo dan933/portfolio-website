@@ -11,6 +11,7 @@ import { OverviewComponent } from './overview/overview.component';
 import { RProjectsComponent } from './r-projects/r-projects.component';
 import { CProjectsPictureFilterComponent } from './c-projects/c-projects-picture-filter/c-projects-picture-filter.component';
 import { CProjectsCreditComponent } from './c-projects/c-projects-credit/c-projects-credit.component';
+import { CProjectsSubstitutionComponent } from './c-projects/c-projects-substitution/c-projects-substitution.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CProjectsCreditComponent } from './c-projects/c-projects-credit/c-proje
     OverviewComponent,
     RProjectsComponent,
     CProjectsPictureFilterComponent,
-    CProjectsCreditComponent
+    CProjectsCreditComponent,
+    CProjectsSubstitutionComponent
   ],
   imports: [
     BrowserModule,

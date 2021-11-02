@@ -1,0 +1,196 @@
+<div style="margin-bottom: 150px;"></div>
+<div class="container">
+  <h1 class="header-left">C Projects</h1>
+  <mat-toolbar class="sub-nav">
+    <button mat-button  routerLink="/c-projects" class="sub-nav-buttons">Picture Filter</button>
+    <button mat-button  routerLink="/c-projects/credit" class="sub-nav-buttons">Credit</button>
+    <button mat-button  routerLink="/c-projects/substitution" routerLinkActive="active" class="sub-nav-buttons">substitution</button>
+  </mat-toolbar>
+  <h2 class="header2-left">Substitution</h2>
+  <figure>
+    <img class="border img-medium-responsive" src="../../../assets/Images/cprojects-substitution/c-substitution.jpg" alt="substitution picture">
+    <figcaption style="max-width: 700px; font-size: larger;">
+      <a target="_blank" href="https://cs50.harvard.edu/x/2020/psets/2/substitution/">Subsitution</a> is a C program that takes plain text input from
+      the user and implements a substitution cipher to encode the message. The substitution cipher is chosen by the user.
+      The substitution cipher must contain every letter of the alphabet only once. The cipher text does not change numbers however capitalisation is kept.
+      The program stores the users substitution cipher in an array and then runs a series of checks to ensure it is a valid key,
+      using if statements nested inside for loops. The cipher text is not affected by whether the substitution cipher is capitalised or not.
+      The program uses ASCII values to identify whether the plaintext is capital or lower case. If the ASCII code is between 97 and 122 then the
+      letter is lowercase. If the ACII code is between 65 and 90 then the letter is uppercase.
+    </figcaption>
+  </figure>
+  <mat-accordion>
+    <mat-expansion-panel class="source-code" (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Source Code
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <pre style="font-size: 1rem; overflow: auto;">
+        {{'
+          &#35;include &#60;stdio.h&#62;
+          &#35;include &#60;cs50.h&#62;
+          &#35;include &#60;math.h&#62;
+
+
+          // Capital letters A-Z
+          char cap_char[26];
+          char LC_char[26];
+          char cap_val[26];
+          char LC_val[26];
+
+          // lc char 26
+
+          int main(int argc, string argv[])
+
+          {
+              // capital A-Z
+              for (int i = 0, j = 65; i < 26; i++, j++)
+              {
+                  cap_char[i] = j;
+              }
+
+              // Lower Case a-z
+              for (int i = 0, j = 97; i < 26; i++, j++)
+              {
+                  LC_char[i] = j;
+              }
+
+
+              // capital A-Z
+              for (int i = 0, j = 65; i < 26; i++, j++)
+              {
+                  cap_val[i] = j;
+              }
+
+              // Lower Case a-z
+              for (int i = 0, j = 97; i < 26; i++, j++)
+              {
+                  LC_val[i] = j;
+              }
+
+
+              // counters
+              int check = 0;
+
+
+
+              if (argc != 2)
+              {
+                  printf("Usage: ./substitution KEY\\n");
+
+                  return 1;
+
+              }
+              else if (strlen(argv[1]) != 26)
+
+              {
+                  printf("Key must contain 26 characters.\\n");
+                  return 1;
+
+              }
+              else
+
+              {
+                  // for loop for every class argv index (26)
+                  for (int i = 0; i < strlen(argv[1]); i++)
+                  {
+                      // if letter is between A-Z or a-z then
+                      if ((65 <= argv[1][i] && argv[1][i] <= 90) || (97 <= argv[1][i] && argv[1][i] <= 122))
+                      {
+
+                          for (int j = 0; j < 26; j++)
+                          {
+                              // if match + 1 to check variable
+                              if ((cap_val[j] == argv[1][i]) || (LC_val[j] == argv[1][i]))
+                              {
+                                  // if match + 1 to check
+                                  cap_val[j] = 0;
+                                  LC_val[j] = 0;
+                                  check = check + 1;
+
+                              }
+                          }
+                      }
+                      else
+                      {
+                          //return error if charecter is anything other than alphabetic
+                          printf("Key must only contain alphabetic characters.\\n");
+                          return 1;
+                      }
+                  }
+                  // if check does not match.
+                  if (check != 26)
+                  {
+                      printf("Key must not contain repeated characters.\\n");
+                      return 1;
+
+                  }
+                  else if (check == 26)
+
+                  {
+                      //Get plain text from the user
+                      string Plaintext = get_string("plaintext:");
+
+
+                      //convert string to cipher text
+                      //for loop for the length of plaintext characters
+                      for (int i = 0; i < strlen(Plaintext); i++)
+                      {
+
+                          //for loop for every letter in the alphabet
+                          for (int j = 0; j < 26; j++)
+                          {
+                              // if user input is a capital letter
+                              if (Plaintext[i] == cap_char[j])
+                              {
+                                  //if Key is lower case
+                                  if (97 <= argv[1][j] && argv[1][j] <= 122)
+                                  {
+                                      //user input index i equals Key (converted to capital letter)
+                                      Plaintext[i] = argv[1][j] - 32;
+                                      //break for loop j
+                                      break;
+                                  }
+                                  else
+                                  {
+                                      //else user input index i equals key index j
+                                      Plaintext[i] = argv[1][j];
+                                      break;
+                                  }
+
+
+                              }
+                              else if (Plaintext[i] == LC_char[j])
+
+                              {
+                                  if (65 <= argv[1][j] && argv[1][j] <= 90)
+                                  {
+                                      Plaintext[i] = argv[1][j] + 32;
+                                      break;
+                                  }
+                                  else
+                                  {
+                                      Plaintext[i] = argv[1][j];
+                                      break;
+                                  }
+
+
+                              }
+                          }
+                      }
+                      //print cipher text
+                      printf("ciphertext:%s\\n", Plaintext);
+
+                      return 0;
+                  }
+              }
+
+          }'}}              </pre>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <div style="margin-bottom: 20px;"></div>
+</div>
+
+
