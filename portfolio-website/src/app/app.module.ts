@@ -9,7 +9,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from './app-material/app-material.module';
 import { OverviewComponent } from './overview/overview.component';
 import { RProjectsComponent } from './r-projects/r-projects.component';
-import { CProjectsComponent } from './c-projects/c-projects.component';
 import { CProjectsPictureFilterComponent } from './c-projects/c-projects-picture-filter/c-projects-picture-filter.component';
 
 @NgModule({
@@ -17,7 +16,6 @@ import { CProjectsPictureFilterComponent } from './c-projects/c-projects-picture
     AppComponent,
     OverviewComponent,
     RProjectsComponent,
-    CProjectsComponent,
     CProjectsPictureFilterComponent
   ],
   imports: [

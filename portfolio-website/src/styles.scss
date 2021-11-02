@@ -28,6 +28,18 @@ p
   line-height: 30px;
 }
 
+p a
+{
+  color: #007bff;
+  text-decoration: none;
+}
+
+p a:hover
+{
+  color: #0056b3;
+  text-decoration: underline;
+}
+
 
 
 .logos
@@ -39,11 +51,23 @@ p
 
 .img
 {
-  cursor: pointer;
   height: 300px;
   width:  auto;
   margin: 5px;
   padding:4px;
+}
+
+.img-medium-responsive
+{
+  text-align: left;
+  max-width: 500px;
+  width: 99%;
+  height: auto;
+}
+
+.cursor-pointer
+{
+  cursor: pointer;
 }
 
 .img-container
@@ -54,6 +78,12 @@ p
   color: gray;
 }
 
+.container
+{
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
 .container-center
 {
   text-align: center;
@@ -61,10 +91,11 @@ p
   margin-right: 15px;
 }
 
+
+
 //grid classes
 .card
 {
-  //width:400px;
   margin-top: 40px;
   display: flex;
   flex-direction: column;
@@ -72,10 +103,12 @@ p
   align-items: center;
 }
 
+
 .basic-grid
 {
+  margin: 10px;
   display: grid;
-  gap: 1rem;
+  gap: 2.5rem;
   grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
 }
 
@@ -111,4 +144,17 @@ p
   font-size: 40px !important;
   margin-bottom: 40px !important;
   text-align: left !important;
+}
+
+.header2-left
+{
+  font-size: 30px !important;
+  margin-bottom: 40px !important;
+  text-align: left !important;
+  font-weight: 400 !important;
+}
+
+.left
+{
+  text-align: left;
 }
