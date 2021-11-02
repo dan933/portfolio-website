@@ -14,12 +14,59 @@
     <mat-tab label="Grayscale">
       <div style="margin-top: 20px;"></div>
       <h1 class="header-left">Grayscale</h1>
-      <img class="border img-medium-responsive" src="../../../assets/Images/cprojects-picture-filters/c-example-grayscale.jpg" alt="grayscale picture">
-      <P>
-        To transform an image to grey the red, green and blue values in the pixel have to be the same.
-        To achieve this I used a nested for loop to iterate over every pixel captured the red, green and blue values and calculated the average of that pixel.
-        I then assigned that value to the red, green and blue values in that pixel.
-      </P>
+      <figure>
+        <img class="border img-medium-responsive" src="../../../assets/Images/cprojects-picture-filters/c-example-grayscale.jpg" alt="grayscale picture">
+        <figcaption style="max-width: 700px; font-size: larger;">
+          To transform an image to grey the red, green and blue values in the pixel have to be the same.
+          To achieve this I used a nested for loop to iterate over every pixel captured the red, green and blue values and calculated the average of that pixel.
+          I then assigned that value to the red, green and blue values in that pixel.
+        </figcaption>
+
+      </figure>
+      <mat-accordion>
+        <mat-expansion-panel class="source-code" (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Source Code
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <pre style="font-size: 1rem; overflow: auto;">
+            {{'// Convert image to grayscale
+            void grayscale(int height, int width, RGBTRIPLE image[height][width])
+            {
+
+              //var that stores avg rgb value
+              float avg_rgb_pxl;
+              float b;
+              float g;
+              float r;
+
+              // loop over height
+              for (int i = 0; i &lt; height; i++)
+              {
+                  // loop over width
+                  for (int j = 0; j &lt; width; j++)
+                  {
+                      //avg rgb pixel value
+                      b = image[i][j].rgbtBlue;
+                      g = image[i][j].rgbtGreen;
+                      r = image[i][j].rgbtRed;
+
+                      avg_rgb_pxl = (b + g + r) / 3 + 0.5;
+
+                      //convert rgb to grayscale
+                      image[i][j].rgbtBlue = avg_rgb_pxl;
+                      image[i][j].rgbtGreen = avg_rgb_pxl;
+                      image[i][j].rgbtRed = avg_rgb_pxl;
+                  }
+              }
+              return;
+            } '}}              </pre>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <div style="margin-bottom: 20px;"></div>
+
     </mat-tab>
     <mat-tab label="Sepia">
        Content 2
@@ -32,4 +79,3 @@
     </mat-tab>
   </mat-tab-group>
 </div>
-

@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./c-projects-picture-filter.component.scss']
 })
 export class CProjectsPictureFilterComponent implements OnInit {
+  panelOpenState = false;
 
   constructor() { }
 
