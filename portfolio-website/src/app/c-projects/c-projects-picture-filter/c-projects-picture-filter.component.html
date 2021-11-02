@@ -1,15 +1,17 @@
 <div style="margin-top:150px;"></div>
 <div class="container">
   <h1 class="header-left">C Projects</h1>
+  <mat-toolbar class="sub-nav">
+    <button mat-button  routerLink="/c-projects" routerLinkActive="active" class="nav-buttons">Picture Filter</button>
+    <button mat-button  routerLink="/c-projects/credit" routerLinkActive="active" class="nav-buttons">Credit</button>
+  </mat-toolbar>
   <h2 class="header2-left">Picture Filter</h2>
   <p class="left">
     The <a target="_blank" href="https://cs50.harvard.edu/x/2020/psets/4/filter/less/">picture</a> filter project was part of Harvard's CS50 course problem set four.
     The program takes a .bmp file as an input and returns an output file with the users desired filter.
     My job in this problem set was to create the part of the program that manipulates the pixels and returns the desired filter.
   </p>
-  <mat-toolbar class="sub-nav">
-    <button mat-button  routerLink="/c-projects" routerLinkActive="active" class="nav-buttons">Picture Filter</button>
-  </mat-toolbar>
+
   <mat-tab-group>
     <mat-tab label="Grayscale">
       <div style="margin-top: 20px;"></div>
@@ -17,7 +19,7 @@
       <figure>
         <img class="border img-medium-responsive" src="../../../assets/Images/cprojects-picture-filters/c-example-grayscale.jpg" alt="grayscale picture">
         <figcaption style="max-width: 700px; font-size: larger;">
-          To transform an image to grey the red, green and blue values in the pixel have to be the same.
+          To transform an image to gray the red, green and blue values in the pixel have to be the same.
           To achieve this I used a nested for loop to iterate over every pixel captured the red, green and blue values and calculated the average of that pixel.
           I then assigned that value to the red, green and blue values in that pixel.
         </figcaption>
@@ -69,13 +71,333 @@
 
     </mat-tab>
     <mat-tab label="Sepia">
-       Content 2
+      <div style="margin-top: 20px;"></div>
+      <h1 class="header-left">Sepia</h1>
+      <figure>
+        <img class="border img-medium-responsive" src="../../../assets/Images/cprojects-picture-filters/C-example-sepia.jpg" alt="sepia picture">
+        <figcaption style="max-width: 700px; font-size: larger;">
+          To transform a picture to sepia there is a specific formula to get sepia red, sepia green and sepia blue.
+          The original red, green and blue are multiplied by this formula. The formula can also produce a number greater than the 255 colour scale.
+          I created a function to deal with this if sepia is greater than 255 then it becomes 255.
+          A for loop is used to itterate over every pixel in the photo and return the sepia colours.
+        </figcaption>
+      </figure>
+      <mat-accordion>
+        <mat-expansion-panel style="max-width: 800px; margin-left: 35px;" class="source-code" (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Source Code
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <pre style="font-size: 1rem; overflow: auto;">
+            {{'// Convert image to sepia
+            void sepia(int height, int width, RGBTRIPLE image[height][width])
+            {
+                //storage variables
+                float sepia_Red, sepia_Green, sepia_Blue;
+                float r;
+                float g;
+                float b;
+
+                //loop through height
+                for (int i = 0; i &lt; height; i++)
+                {
+                    //loop through width
+                    for (int j = 0; j &lt; width; j++)
+                    {
+                        r = image[i][j].rgbtRed;
+                        g = image[i][j].rgbtGreen;
+                        b = image[i][j].rgbtBlue;
+
+                        //sepia formula
+                        sepia_Red = (.393 * r + .769 * g + .189 * b) + 0.5;
+                        sepia_Green = (.349 * r + .686 * g + .168 * b) + 0.5;
+                        sepia_Blue = (.272 * r + .534 * g + .131 * b) + 0.5;
+
+                        //if greater than 255 sepia is 255 if less than 0 sepia is 0
+                        sepia_Red = sepia_function(sepia_Red);
+                        sepia_Green = sepia_function(sepia_Green);
+                        sepia_Blue = sepia_function(sepia_Blue);
+
+                        //assign new colours to pixel
+                        image[i][j].rgbtRed = sepia_Red;
+                        image[i][j].rgbtGreen = sepia_Green;
+                        image[i][j].rgbtBlue = sepia_Blue;
+                    }
+                }
+
+
+
+                return;
+            }
+
+            //create function to ensure 0 to 255 colour range
+
+            //function if greater than 255 or less than 0
+            int sepia_function(float sepia)
+            {
+                if (255 &lt; sepia)
+                {
+                    return 255;
+                }
+                else if (sepia &lt; 0)
+                {
+                    return 0;
+                }
+                else
+                {
+                    return sepia;
+                }
+
+            }
+                           '}}              </pre>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <div style="margin-bottom: 20px;"></div>
     </mat-tab>
     <mat-tab label="Reflect">
-      Content 3
+      <div style="margin-top: 20px;"></div>
+      <h1 class="header-left">Reflect</h1>
+
+        <div class="basic-grid">
+          <figure>
+          <img class="border img-medium-responsive" src="../../../assets/Images/cprojects-picture-filters/reflect-original.jpg" alt="Original picture">
+          <img class="border img-medium-responsive" src="../../../assets/Images/cprojects-picture-filters/reflect.jpg" alt="Reflection picture">
+          <figcaption style="max-width: 700px; font-size: larger;">
+            This filter creates a mirror reflection of the original image. It does this by swapping the pixels in each
+            half of the image using a nested for loop and temporary variables to store the red green and blue pixels,
+            while the swap occurs.
+          </figcaption>
+        </figure>
+        </div>
+      <mat-accordion>
+        <mat-expansion-panel class="source-code-large" (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Source Code
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <pre style="font-size: 1rem; overflow: auto;">
+            {{'// Reflect image horizontally
+            void reflect(int height, int width, RGBTRIPLE image[height][width])
+            {
+                int temp_Red;
+                int temp_Green;
+                int temp_Blue;
+
+                for (int i = 0; i &lt; height; i++)
+                {
+                    for (int j = 0, x = 1; j &lt; width / 2; j++, x++)
+                    {
+                        temp_Red = image[i][j].rgbtRed;
+                        temp_Green = image[i][j].rgbtGreen;
+                        temp_Blue = image[i][j].rgbtBlue;
+
+                        image[i][j].rgbtRed = image[i][width - x].rgbtRed;
+                        image[i][j].rgbtGreen = image[i][width - x].rgbtGreen;
+                        image[i][j].rgbtBlue = image[i][width - x].rgbtBlue;
+
+                        image[i][width - x].rgbtRed = temp_Red;
+                        image[i][width - x].rgbtGreen = temp_Green;
+                        image[i][width - x].rgbtBlue = temp_Blue;
+                    }
+                }
+                return;
+            }'}}              </pre>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <div style="margin-bottom: 20px;"></div>
     </mat-tab>
     <mat-tab label="Blur">
-      Content 4
+      <div style="margin-top: 20px;"></div>
+      <h1 class="header-left">Blur</h1>
+
+        <div class="basic-grid">
+          <figure>
+          <img class="border img-medium-responsive" src="../../../assets/Images/cprojects-picture-filters/blur-original.jpg" alt="Original picture">
+          <img class="border img-medium-responsive" src="../../../assets/Images/cprojects-picture-filters/blur.jpg" alt="Blured picture">
+          <figcaption style="max-width: 700px; font-size: larger;">
+            The blur filter works by taking the average of the red, green and blue in the surrounding pixels. The result is stored in an array, once all the values are calculated, the image's pixels are stored to that value.
+          </figcaption>
+        </figure>
+        </div>
+      <mat-accordion>
+        <mat-expansion-panel class="source-code-large" (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Source Code
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <pre style="font-size: 1rem; overflow: auto;">
+            {{'//Blur functions
+            int isColour(int i, int j, int height, int width);
+            int avg_blur(int height, int width, RGBTRIPLE img[height][width], int i, int j, int colour);
+
+            // Blur image
+            void blur(int height, int width, RGBTRIPLE image[height][width])
+            {
+                RGBTRIPLE avg_image[height][width];
+
+                for (int i = 0; i &lt; height; i++)
+                {
+                    for (int j = 0; j &lt; width; j++)
+                    {
+
+                        avg_image[i][j].rgbtRed = avg_blur(height, width, image, i, j, 1);
+
+                        avg_image[i][j].rgbtGreen = avg_blur(height, width, image, i, j, 2);
+
+                        avg_image[i][j].rgbtBlue = avg_blur(height, width, image, i, j, 3);
+                    }
+
+                }
+
+                for (int k = 0; k &lt; height; k++)
+                {
+                    for (int l = 0; l &lt; width; l++)
+                    {
+                        image[k][l].rgbtRed = avg_image[k][l].rgbtRed;
+                        image[k][l].rgbtGreen = avg_image[k][l].rgbtGreen;
+                        image[k][l].rgbtBlue = avg_image[k][l].rgbtBlue;
+                    }
+                }
+
+                return;
+            }
+
+            //check if current pixel exists in the image.
+            int isColour(int i, int j, int height, int width)
+            {
+                if (i &gt;= 0 && j &gt;= 0 && i &lt; height && j &lt; width)
+                {
+                    return 1;
+                }
+
+                return 0;
+
+            }
+
+            //function to get the average red green and blue in the surrounding pixels.
+            int avg_blur(int height, int width, RGBTRIPLE img[height][width], int i, int j, int colour)
+            {
+                int counter = 0;
+
+                float avg_red = 0;
+                float avg_green = 0;
+                float avg_blue = 0;
+
+
+                    //if pixel exists increase counter var by one and increase red, green and blue by the colour value of the current pixel.
+
+                    //left pixel
+                    if (isColour(i - 1, j, height, width))
+                    {
+                        counter += 1;
+
+                        avg_red += img[i - 1][j].rgbtRed;
+                        avg_green += img[i - 1][j].rgbtGreen;
+                        avg_blue += img[i - 1][j].rgbtBlue;
+
+                    }
+
+                    //bottom left pixel
+                    if (isColour(i - 1, j - 1, height, width))
+                    {
+                        counter += 1;
+                        avg_red += img[i - 1][j - 1].rgbtRed;
+                        avg_green += img[i - 1][j - 1].rgbtGreen;
+                        avg_blue += img[i - 1][j - 1].rgbtBlue;
+                    }
+
+                    //top left pixel
+                    if (isColour(i - 1, j + 1, height, width))
+                    {
+                        counter += 1;
+                        avg_red += img[i - 1][j + 1].rgbtRed;
+                        avg_green += img[i - 1][j + 1].rgbtGreen;
+                        avg_blue += img[i - 1][j + 1].rgbtBlue;
+                    }
+
+                    //center pixel
+                    if (isColour(i, j, height, width))
+                    {
+                        counter += 1;
+                        avg_red += img[i][j].rgbtRed;
+                        avg_green += img[i][j].rgbtGreen;
+                        avg_blue += img[i][j].rgbtBlue;
+                    }
+
+                    //top pixel
+                    if (isColour(i, j - 1, height, width))
+                    {
+                        counter += 1;
+                        avg_red += img[i][j - 1].rgbtRed;
+                        avg_green += img[i][j - 1].rgbtGreen;
+                        avg_blue += img[i][j - 1].rgbtBlue;
+                    }
+
+                    //bottom pixel
+                    if (isColour(i, j + 1, height, width))
+                    {
+                        counter += 1;
+                        avg_red += img[i][j + 1].rgbtRed;
+                        avg_green += img[i][j + 1].rgbtGreen;
+                        avg_blue += img[i][j + 1].rgbtBlue;
+                    }
+
+                    //right pixel
+                    if (isColour(i + 1, j, height, width))
+                    {
+                        counter += 1;
+                        avg_red += img[i + 1][j].rgbtRed;
+                        avg_green += img[i + 1][j].rgbtGreen;
+                        avg_blue += img[i + 1][j].rgbtBlue;
+                    }
+
+                    //top right pixel
+                    if (isColour(i + 1, j - 1, height, width))
+                    {
+                        counter += 1;
+                        avg_red += img[i + 1][j - 1].rgbtRed;
+                        avg_green += img[i + 1][j - 1].rgbtGreen;
+                        avg_blue += img[i + 1][j - 1].rgbtBlue;
+                    }
+
+                    //bottom right pixel
+                    if (isColour(i + 1, j + 1, height, width))
+                    {
+                        counter += 1;
+                        avg_red += img[i + 1][j + 1].rgbtRed;
+                        avg_green += img[i + 1][j + 1].rgbtGreen;
+                        avg_blue += img[i + 1][j + 1].rgbtBlue;
+                    }
+
+                    //calculate each colours average.
+                    avg_red = avg_red/counter + 0.5;
+                    avg_green = avg_green/counter + 0.5;
+                    avg_blue = avg_blue/counter + 0.5;
+
+                    //return colour average based on colour var input.
+                    if (colour == 1)
+                    {
+                        return avg_red;
+                    }
+
+                    else if (colour == 2)
+                    {
+                        return avg_green;
+                    }
+
+                    else if (colour == 3)
+                    {
+                        return avg_blue;
+                    }'}}              </pre>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <div style="margin-bottom: 20px;"></div>
     </mat-tab>
   </mat-tab-group>
 </div>

@@ -1,0 +1,18 @@
+<div style="margin-bottom: 150px;"></div>
+<div class="container">
+  <h1 class="header-left">C Projects</h1>
+  <mat-toolbar class="sub-nav">
+    <button mat-button  routerLink="/c-projects" class="nav-buttons">Picture Filter</button>
+    <button mat-button  routerLink="/c-projects/credit" routerLinkActive="active" class="nav-buttons">Credit</button>
+  </mat-toolbar>
+  <h2 class="header2-left">Credit</h2>
+  <figure>
+    <img class="border img-medium-responsive" src="../../../assets/Images/cprojects-picture-filters/c-example-grayscale.jpg" alt="grayscale picture">
+    <figcaption style="max-width: 700px; font-size: larger;">
+      To transform an image to gray the red, green and blue values in the pixel have to be the same.
+      To achieve this I used a nested for loop to iterate over every pixel captured the red, green and blue values and calculated the average of that pixel.
+      I then assigned that value to the red, green and blue values in that pixel.
+    </figcaption>
+  </figure>
+</div>
+

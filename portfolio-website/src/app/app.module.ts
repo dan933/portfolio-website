@@ -10,13 +10,15 @@ import { AppMaterialModule } from './app-material/app-material.module';
 import { OverviewComponent } from './overview/overview.component';
 import { RProjectsComponent } from './r-projects/r-projects.component';
 import { CProjectsPictureFilterComponent } from './c-projects/c-projects-picture-filter/c-projects-picture-filter.component';
+import { CProjectsCreditComponent } from './c-projects/c-projects-credit/c-projects-credit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OverviewComponent,
     RProjectsComponent,
-    CProjectsPictureFilterComponent
+    CProjectsPictureFilterComponent,
+    CProjectsCreditComponent
   ],
   imports: [
     BrowserModule,
