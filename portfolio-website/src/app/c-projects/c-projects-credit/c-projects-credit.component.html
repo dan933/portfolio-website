@@ -2,17 +2,221 @@
 <div class="container">
   <h1 class="header-left">C Projects</h1>
   <mat-toolbar class="sub-nav">
-    <button mat-button  routerLink="/c-projects" class="nav-buttons">Picture Filter</button>
-    <button mat-button  routerLink="/c-projects/credit" routerLinkActive="active" class="nav-buttons">Credit</button>
+    <button mat-button  routerLink="/c-projects" class="sub-nav-buttons">Picture Filter</button>
+    <button mat-button  routerLink="/c-projects/credit" routerLinkActive="active" class="sub-nav-buttons">Credit</button>
   </mat-toolbar>
   <h2 class="header2-left">Credit</h2>
   <figure>
-    <img class="border img-medium-responsive" src="../../../assets/Images/cprojects-picture-filters/c-example-grayscale.jpg" alt="grayscale picture">
+    <img class="border img-medium-responsive" src="../../../assets/Images/cprojects-credit/credit.jpg" alt="Credit picture">
     <figcaption style="max-width: 700px; font-size: larger;">
-      To transform an image to gray the red, green and blue values in the pixel have to be the same.
-      To achieve this I used a nested for loop to iterate over every pixel captured the red, green and blue values and calculated the average of that pixel.
-      I then assigned that value to the red, green and blue values in that pixel.
+      The objective of <a target="_blank" href="https://cs50.harvard.edu/x/2020/psets/1/credit/">credit</a>
+      is to verify a users credit card number and identify whether the card is Visa, Mastercard or American express.
+      The program verfies whether the card using <a target="_blank" href="https://en.wikipedia.org/wiki/Luhn_algorithm">Luhn's Algorithm</a>.
     </figcaption>
   </figure>
+  <mat-accordion>
+    <mat-expansion-panel class="source-code" (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Source Code
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <pre style="font-size: 1rem; overflow: auto;">
+        {{'
+          &#35;include &#60;stdio.h&#62;
+          &#35;include &#60;cs50.h&#62;
+          &#35;include &#60;math.h&#62;
+
+
+          int countDigit(long long n);
+          long digits(long num_of_digits, int position, long card_number);
+          string function_card_validation(long all_digits[16], long num_of_digits, string car);
+
+
+          int main(void)
+
+          {
+
+              /* get users credit card number digits validate numbers and digits*/
+              long card_number;
+              long num_of_digits;
+              long digit;
+              int dn_validation;
+              long all_digits[16];
+              string card;
+
+          // do while loop
+              do
+              {
+
+          //user input card_number
+                  card_number = get_long("Card Number:");
+
+          //count number of digits
+                  num_of_digits = countDigit(card_number);
+
+          // if number of digits is 13, 15 or 16 then run for loop else run do loop again
+                  if (num_of_digits == 13 || num_of_digits == 15 || num_of_digits == 16)
+                  {
+
+          // for loop to store all digits in an array
+                      for (int i = 0, j = 1; i < num_of_digits; i++, j++)
+                      {
+                          all_digits[i] = digits(num_of_digits, j, card_number);
+                      }
+
+                      if ((all_digits[num_of_digits - 1] == 3 && all_digits[num_of_digits - 2] == 4 && num_of_digits == 15)
+                          || (all_digits[num_of_digits - 1] == 3 && all_digits[num_of_digits - 2] == 7 && num_of_digits == 15))
+                      {
+
+                          card = function_card_validation(all_digits, num_of_digits, "AMEX");
+
+
+                      }
+                      else if (num_of_digits == 16 && all_digits[num_of_digits - 1] == 5 && (all_digits[num_of_digits - 2] == 1
+                               || all_digits[num_of_digits - 2] == 2 || all_digits[num_of_digits - 2] == 3
+                               || all_digits[num_of_digits - 2] == 4 || all_digits[num_of_digits - 2] == 5))
+                      {
+                          card = function_card_validation(all_digits, num_of_digits, "MASTERCARD");
+
+                      }
+                      else if (all_digits[num_of_digits - 1] == 4)
+
+                      {
+                         card = function_card_validation(all_digits, num_of_digits, "VISA");
+
+                      }
+                      else
+                      {
+                          num_of_digits = 0;
+                      }
+
+
+                  }
+                  else
+
+                  {
+
+                     num_of_digits = 0;
+
+                  }
+
+              }
+              while (num_of_digits <= 0);
+              printf("%s\n", card);
+
+          }
+
+          long digits(long num_of_digits, int position, long card_number)
+          {
+              long y;
+
+              if (position - 1 == 1)
+              {
+                  y = 10;
+              }
+              else if (position - 1 == 0)
+              {
+                  y = 1;
+              }
+              else
+              {
+
+                  y = 10;
+                  for (long i = 0; i < position - 2; i++)
+                  {
+                      y = y * 10;
+                  }
+              }
+              long x;
+              x = card_number / y;
+
+
+              int cust_digit = x % 10;
+              return  cust_digit;
+          }
+
+
+          int countDigit(long long n)
+          {
+              int count = 0;
+              while (n != 0)
+              {
+                  n = n / 10;
+                  ++count;
+
+              }
+              return count;
+            }
+
+          // function outputs string
+          string function_card_validation(long all_digits[16], long num_of_digits, string card)
+          {
+              long array_multi_sum [16];
+              long array_sum_last_every_second[16];
+              long count_tens = 0;
+              long sum_array_ms = 0;
+              long sum_array_last_every_second = 0;
+              long total_dig_sum = 0;
+              string car;
+
+
+              for (int l = 0, m = 1; m < num_of_digits; l++, m += 2)
+
+              {
+                  // store everything second digit in array
+                  array_multi_sum[l] = all_digits[m];
+
+                  //multiply that array by 2
+                  array_multi_sum[l] = array_multi_sum[l] * 2;
+
+                  if (array_multi_sum[l] >= 10)
+                  {
+                      //subtract 10 if value is greater than 10
+                      array_multi_sum[1] = array_multi_sum[1] - 10;
+
+                      //store 1 in count_tens var everytime array item is greater than 1
+                      count_tens = count_tens + 1;
+                  }
+                  // add all of sum arrays and store it in sum_array_ms variable
+                  sum_array_ms = sum_array_ms + array_multi_sum[l];
+              }
+              //sum value of count tens with sum_array_ms
+              sum_array_ms = sum_array_ms + count_tens;
+
+              for (int n = 0, o = 0 ; o < num_of_digits; n++, o += 2)
+              {
+                  // sum every second digit starting with the last digit
+                  array_sum_last_every_second[n] = all_digits[o];
+
+                  sum_array_last_every_second = sum_array_last_every_second + array_sum_last_every_second[n];
+
+                  //sum both arrays
+                  total_dig_sum = sum_array_ms + sum_array_last_every_second;
+                  // mod 10 to the total
+                  total_dig_sum = total_dig_sum % 10;
+
+                  // if total equals 0 then card is AMEX if false card is INVALID
+                  if (total_dig_sum == 0)
+                  {
+                      car = card;
+                  }
+                  else
+                  {
+                      car = "INVALID";
+                  }
+
+
+              }
+
+
+
+
+              return  car;
+          }             '}}              </pre>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <div style="margin-bottom: 20px;"></div>
 </div>
 

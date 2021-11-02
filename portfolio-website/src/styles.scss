@@ -29,13 +29,13 @@ p
   line-height: 30px;
 }
 
-p a
+p a, figcaption a
 {
   color: #007bff;
   text-decoration: none;
 }
 
-p a:hover
+p a:hover, figcaption a:hover
 {
   color: #0056b3;
   text-decoration: underline;
@@ -180,5 +180,9 @@ p a:hover
     max-width: 818px;
   }
 
+}
 
+.sub-nav-buttons
+{
+  margin-right: 4px !important;
 }

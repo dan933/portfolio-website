@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./c-projects-credit.component.scss']
 })
 export class CProjectsCreditComponent implements OnInit {
+  panelOpenState = false;
 
   constructor() { }
 
