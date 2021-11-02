@@ -1,0 +1,101 @@
+<div style="margin-top:150px;"></div>
+<div class="container">
+  <h1 class="header-left">C Projects</h1>
+  <mat-toolbar class="sub-nav">
+    <button mat-button  routerLink="/c-projects" routerLinkActive="active" class="sub-nav-buttons">Picture Filter</button>
+    <button mat-button  routerLink="/c-projects/credit" routerLinkActive="active" class="sub-nav-buttons">Credit</button>
+    <button mat-button  routerLink="/c-projects/substitution" routerLinkActive="active" class="sub-nav-buttons">substitution</button>
+    <button mat-button  routerLink="/c-projects/recover" routerLinkActive="active" class="sub-nav-buttons">Recover</button>
+    <button mat-button  routerLink="/c-projects/speller" routerLinkActive="active" class="sub-nav-buttons">Speller</button>
+  </mat-toolbar>
+  <h2 class="header2-left">Recover</h2>
+  <p>
+    <a target="_blank" href="https://cs50.harvard.edu/x/2020/psets/4/recover/">Recover</a> takes a .raw file as it's input, it scans the file for the first four bytes of a JPEG file.
+    When those four bytes are found the program creats a new JPEG file and writes the bytes to the new JPEG file 512
+    bytes at a time. Once the end of the JPEG file is found in other words a new JPEG file is found it closes the
+    old file and the process is repeated until the end of the file.
+  </p>
+  <mat-accordion>
+    <mat-expansion-panel class="source-code-large" (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Source Code
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <pre style="font-size: 1rem; overflow: auto;">
+        {{'
+          &#35;include &#60;stdio.h&#62;
+          &#35;include &#60;cs50.h&#62;
+          &#35;include &#60;math.h&#62;
+
+
+          typedef uint8_t BYTE;
+
+          int main(int argc, char *argv[])
+          {
+              //validate correct use
+              if (argc != 2)
+              {
+                  printf("Usage: ./recover image\\n");
+                  return 1;
+              }
+
+              //open file to be read
+              FILE *b_reader = fopen(argv[1], "r");
+              if (b_reader == NULL)
+              {
+                  printf("File:%s, not found.\\n", argv[1]);
+                  return 1;
+              }
+
+              //jpg filename storage allocation
+              char filename[8];
+
+              //jpeg filename
+              int file_id = -1;
+
+              //file write var
+              FILE *fw = NULL;
+
+              //buffer
+              BYTE buffer[512];
+              int x = 1;
+
+              //loop over every chunck 7320
+              while (feof(b_reader) == 0)
+              {
+                  fread(buffer, sizeof(BYTE), 512, b_reader);
+
+                  if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
+                  {
+                      if (fw != NULL)
+                      {
+                          fclose(fw);
+                      }
+                      //create new jpeg file
+                      file_id = file_id + 1;
+                      sprintf(filename, "%03i.jpg", file_id);
+
+                      //open jpeg file for writting
+                      fw = fopen(filename, "w");
+
+
+                      //write 512 bytes
+                      fwrite(buffer, sizeof(BYTE), 512, fw);
+                  }
+                  // if fw is not null and b_reader has not reached the end of the file then write in jpeg file
+                  else if (fw != NULL && feof(b_reader) == 0)
+                  {
+                      fwrite(buffer, sizeof(BYTE), 512, fw);
+                  }
+              }
+
+
+
+              fclose(fw);
+              fclose(b_reader);
+          }'}}              </pre>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <div style="margin-bottom: 20px;"></div>

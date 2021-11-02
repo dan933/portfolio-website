@@ -174,8 +174,16 @@ p a:hover, figcaption a:hover
 
 }
 
+.source-code-large-flex
+{
+  background-color: lightgray;
+  max-width: 1516px;
+  margin-left: 35px;
+
+}
+
 @media screen and (max-width: 1516px) {
-  .source-code-large
+  .source-code-large-flex
   {
     max-width: 818px;
   }

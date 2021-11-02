@@ -1,0 +1,103 @@
+<div style="margin-bottom: 150px;"></div>
+<div class="container">
+  <h1 class="header-left">Python Projects</h1>
+  <h2 class="header2-left">DNA</h2>
+  <figure>
+    <img class="border img-medium-responsive" src="../../assets/Images/python-projects/DNA Example.png" alt="Credit picture">
+    <figcaption style="max-width: 700px; font-size: larger;">
+      <a target="_blank" href="https://cs50.harvard.edu/x/2020/psets/6/dna/">DNA</a>
+      is a python program that returns the name of a person if, their DNA is found in a csv DNA
+      database if no person matching the DNA sequence is found No match is returned. The program
+      reads a sequences.txt file that contains a persons DNA sequence it identifies
+      the longest consecutive repeats for AGATC,TTTTTTCT,AATG,TCTAG,GATA,TATC,GAAA and TCTG. If there
+      is a match then the persons name is returned.
+    </figcaption>
+  </figure>
+  <mat-accordion>
+    <mat-expansion-panel class="source-code" (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Source Code
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <pre style="font-size: 1rem; overflow: auto;">
+        {{"
+        import sys
+        import csv
+
+        def main():
+          if len(sys.argv) != 3:
+          print('Usage: python dna.py data.csv sequence.txt')
+          sys.exit(1)
+
+          #list of csv file
+          with open(sys.argv[1], 'r') as csvfile:
+              data = csv.reader(csvfile)
+              data = list(data)
+
+          with open(sys.argv[2],'r') as txt:
+              #store sequence in txt
+              txt = txt.read()
+
+          #create seq list from txt file
+          seq = list()
+
+          #create sequence values
+          for i in range(1, len(data[0][1:]) + 1, 1):
+              globals()[data[0][i]] = str(sequence(txt, data[0][i]))
+              seq.append(globals()[data[0][i]])
+
+
+
+          #source https://www.codespeedy.com/convert-string-into-variable-name-in-python/#:~:text=Declaring%20Variable%20Name%20Dynamically&text=Now%2C%20by%20using%20globals(),in%20the%20global%20%2F%20local%20namespace.
+          for i in range(1, len(data), 1):
+              if seq == data[i][1:]:
+                  print(data[i][0])
+                  sys.exit(0)
+          print('No match')
+
+          #compare(data, AGATC, TTTTTTCT, AATG, TCTAG, GATA, TATC, GAAA, TCTG)
+
+        def sequence(txt,seq):
+            #list to store seq count
+            count_seq = list()
+
+            #find all sequences of the pattern
+            for index, i in enumerate(txt):
+                if txt[index:index + len(seq)].count(seq):
+                    count_seq.append(1)
+                else:
+                    count_seq.append(0)
+
+            #counter for removing 0
+            count = len(seq) - 1
+
+            #if index finds sequence remove the three zeros infront of it.
+            for index, i in enumerate(count_seq):
+                if count_seq[index] == 1:
+                    for i in range(0,count,1):
+                        return_value = count_seq.pop(index + 1)
+
+            total_seq = 0
+            temp_seq = 0
+
+            #if seq is 1 increase temp counter by 1 then compare temp with total
+            for index, i in enumerate(count_seq):
+                if count_seq[index] == 1:
+                    temp_seq += 1
+                    if total_seq &lt; temp_seq:
+                        total_seq = temp_seq
+                #if count_seq is 0 then reset temp counter
+                else:
+                    temp_seq = 0
+
+            #return largest ocurence of sequence.
+            return total_seq
+
+        main()
+        "}}              </pre>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <div style="margin-bottom: 20px;"></div>
+</div>
