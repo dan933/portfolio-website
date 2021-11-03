@@ -10,6 +10,7 @@ import { CProjectsRecoverComponent } from './c-projects/c-projects-recover/c-pro
 import { CProjectsSpellerComponent } from './c-projects/c-projects-speller/c-projects-speller.component';
 
 import { PythonProjectsComponent } from './python-projects/python-projects.component';
+import { SqlProjectsComponent } from './sql-projects/sql-projects.component';
 
 const routes: Routes = [
   { path: 'overview', component: OverviewComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'c-projects/recover', component: CProjectsRecoverComponent },
   { path: 'c-projects/speller', component: CProjectsSpellerComponent },
   { path: 'python-projects', component: PythonProjectsComponent },
+  { path: 'sql-projects', component: SqlProjectsComponent },
 
 ];
 

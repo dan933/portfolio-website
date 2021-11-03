@@ -15,6 +15,7 @@ import { CProjectsSubstitutionComponent } from './c-projects/c-projects-substitu
 import { CProjectsRecoverComponent } from './c-projects/c-projects-recover/c-projects-recover.component';
 import { CProjectsSpellerComponent } from './c-projects/c-projects-speller/c-projects-speller.component';
 import { PythonProjectsComponent } from './python-projects/python-projects.component';
+import { SqlProjectsComponent } from './sql-projects/sql-projects.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PythonProjectsComponent } from './python-projects/python-projects.compo
     CProjectsSubstitutionComponent,
     CProjectsRecoverComponent,
     CProjectsSpellerComponent,
-    PythonProjectsComponent
+    PythonProjectsComponent,
+    SqlProjectsComponent
   ],
   imports: [
     BrowserModule,

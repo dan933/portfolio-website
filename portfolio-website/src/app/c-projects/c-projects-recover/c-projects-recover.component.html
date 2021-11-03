@@ -1,13 +1,34 @@
 <div style="margin-top:150px;"></div>
 <div class="container">
   <h1 class="header-left">C Projects</h1>
-  <mat-toolbar class="sub-nav">
-    <button mat-button  routerLink="/c-projects" routerLinkActive="active" class="sub-nav-buttons">Picture Filter</button>
+  <mat-toolbar id="sub-nav">
+    <button mat-button  routerLink="/c-projects" class="sub-nav-buttons">Picture Filter</button>
     <button mat-button  routerLink="/c-projects/credit" routerLinkActive="active" class="sub-nav-buttons">Credit</button>
     <button mat-button  routerLink="/c-projects/substitution" routerLinkActive="active" class="sub-nav-buttons">substitution</button>
     <button mat-button  routerLink="/c-projects/recover" routerLinkActive="active" class="sub-nav-buttons">Recover</button>
     <button mat-button  routerLink="/c-projects/speller" routerLinkActive="active" class="sub-nav-buttons">Speller</button>
   </mat-toolbar>
+
+  <mat-toolbar id="sub-nav-compact-container">
+    <mat-toolbar-row>
+      <button mat-button  routerLink="/c-projects" class="sub-nav-buttons-compact">Picture Filter</button>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+      <button mat-button  routerLink="/c-projects/credit" routerLinkActive="active" class="sub-nav-buttons-compact">Credit</button>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+      <button mat-button  routerLink="/c-projects/substitution" routerLinkActive="active" class="sub-nav-buttons-compact">substitution</button>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+      <button mat-button  routerLink="/c-projects/recover" routerLinkActive="active" class="sub-nav-buttons-compact">Recover</button>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+      <button mat-button  routerLink="/c-projects/speller" routerLinkActive="active" class="sub-nav-buttons-compact">Speller</button>
+    </mat-toolbar-row>
+
+  </mat-toolbar>
+
+
   <h2 class="header2-left">Recover</h2>
   <p>
     <a target="_blank" href="https://cs50.harvard.edu/x/2020/psets/4/recover/">Recover</a> takes a .raw file as it's input, it scans the file for the first four bytes of a JPEG file.

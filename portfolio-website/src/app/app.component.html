@@ -10,7 +10,7 @@
       <button routerLink="/r-projects" routerLinkActive="active" mat-menu-item>R</button>
       <button routerLink="/c-projects" routerLinkActive="active" mat-menu-item>C</button>
       <button routerLink="/python-projects" routerLinkActive="active" mat-menu-item>Python</button>
-      <button mat-menu-item>SQL</button>
+      <button mat-menu-item  routerLink="/sql-projects" routerLinkActive="active" class="sub-nav-buttons">SQL</button>
     </mat-menu>
     <button class="nav-buttons" mat-button>Contact</button>
   </div>
@@ -33,8 +33,8 @@
     <div *ngIf="show" id="sub-menu-projects">
       <button class="compact-sub-menu" routerLink="/r-projects" routerLinkActive="active" mat-menu-item>R</button>
       <button class="compact-sub-menu" routerLink="/c-projects" routerLinkActive="active" mat-menu-item>C</button>
-      <button class="compact-sub-menu" mat-menu-item>Python</button>
-      <button class="compact-sub-menu" mat-menu-item>SQL</button>
+      <button class="compact-sub-menu" routerLink="/python-projects" routerLinkActive="active"mat-menu-item>Python</button>
+      <button class="compact-sub-menu" routerLink="/sql-projects" routerLinkActive="active" mat-menu-item>SQL</button>
     </div>
     <br *ngIf="!show">
     <button class="compact-nav-buttons" mat-button>Contact</button>
