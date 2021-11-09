@@ -22,6 +22,7 @@ const routes: Routes = [
   { path: 'c-projects/speller', component: CProjectsSpellerComponent },
   { path: 'python-projects', component: PythonProjectsComponent },
   { path: 'sql-projects', component: SqlProjectsComponent },
+  { path: '',   redirectTo: 'overview', pathMatch: 'full' },
 
 ];
 
