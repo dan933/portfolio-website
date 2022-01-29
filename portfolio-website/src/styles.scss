@@ -201,6 +201,16 @@ figcaption{
   }
 }
 
+.mat-drawer {
+
+  button.compact-nav-buttons{
+
+    &:hover{
+      background-color: lightgray !important;
+    }
+  }
+}
+
 
 .sub-nav-buttons-compact
 {
