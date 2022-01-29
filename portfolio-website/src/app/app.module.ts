@@ -16,6 +16,7 @@ import { CProjectsRecoverComponent } from './components/c-projects/c-projects-re
 import { CProjectsSpellerComponent } from './components/c-projects/c-projects-speller/c-projects-speller.component';
 import { PythonProjectsComponent } from './components/python-projects/python-projects.component';
 import { SqlProjectsComponent } from './components/sql-projects/sql-projects.component';
+import { FullstackComponent } from './components/fullstack/fullstack.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SqlProjectsComponent } from './components/sql-projects/sql-projects.com
     CProjectsRecoverComponent,
     CProjectsSpellerComponent,
     PythonProjectsComponent,
-    SqlProjectsComponent
+    SqlProjectsComponent,
+    FullstackComponent
   ],
   imports: [
     BrowserModule,

@@ -40,7 +40,7 @@
       <h1 class="header-left">Grayscale</h1>
       <figure>
         <img class="border img-medium-responsive" src="../../../assets/Images/cprojects-picture-filters/c-example-grayscale.jpg" alt="grayscale picture">
-        <figcaption style="max-width: 700px; font-size: larger;">
+        <figcaption class="caption" style="max-width: 700px;">
           To transform an image to gray the red, green and blue values in the pixel have to be the same.
           To achieve this I used a nested for loop to iterate over every pixel captured the red, green and blue values and calculated the average of that pixel.
           I then assigned that value to the red, green and blue values in that pixel.
@@ -97,7 +97,7 @@
       <h1 class="header-left">Sepia</h1>
       <figure>
         <img class="border img-medium-responsive" src="../../../assets/Images/cprojects-picture-filters/C-example-sepia.jpg" alt="sepia picture">
-        <figcaption style="max-width: 700px; font-size: larger;">
+        <figcaption class="caption" style="max-width: 700px; !important">
           To transform a picture to sepia there is a specific formula to get sepia red, sepia green and sepia blue.
           The original red, green and blue are multiplied by this formula. The formula can also produce a number greater than the 255 colour scale.
           I created a function to deal with this if sepia is greater than 255 then it becomes 255.
@@ -186,7 +186,7 @@
           <figure>
           <img class="border img-medium-responsive" src="../../../assets/Images/cprojects-picture-filters/reflect-original.jpg" alt="Original picture">
           <img class="border img-medium-responsive" src="../../../assets/Images/cprojects-picture-filters/reflect.jpg" alt="Reflection picture">
-          <figcaption style="max-width: 700px; font-size: larger;">
+          <figcaption class="caption" style="max-width: 700px;">
             This filter creates a mirror reflection of the original image. It does this by swapping the pixels in each
             half of the image using a nested for loop and temporary variables to store the red green and blue pixels,
             while the swap occurs.
@@ -240,7 +240,7 @@
           <figure>
           <img class="border img-medium-responsive" src="../../../assets/Images/cprojects-picture-filters/blur-original.jpg" alt="Original picture">
           <img class="border img-medium-responsive" src="../../../assets/Images/cprojects-picture-filters/blur.jpg" alt="Blured picture">
-          <figcaption style="max-width: 700px; font-size: larger;">
+          <figcaption class="caption" style="max-width: 700px;">
             The blur filter works by taking the average of the red, green and blue in the surrounding pixels. The result is stored in an array, once all the values are calculated, the image's pixels are stored to that value.
           </figcaption>
         </figure>
