@@ -9,6 +9,7 @@ import { CProjectsSubstitutionComponent } from './components/c-projects/c-projec
 import { CProjectsRecoverComponent } from './components/c-projects/c-projects-recover/c-projects-recover.component';
 import { CProjectsSpellerComponent } from './components/c-projects/c-projects-speller/c-projects-speller.component';
 import { FullstackComponent } from './components/fullstack/fullstack.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
 import { PythonProjectsComponent } from './components/python-projects/python-projects.component';
 import { SqlProjectsComponent } from './components/sql-projects/sql-projects.component';
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'python-projects', component: PythonProjectsComponent },
   { path: 'sql-projects', component: SqlProjectsComponent },
   { path: 'fullstack', component: FullstackComponent },
+  { path: 'contact', component: ContactUsComponent },
   { path: '',   redirectTo: 'overview', pathMatch: 'full' },
 
 ];

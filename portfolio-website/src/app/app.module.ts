@@ -17,6 +17,7 @@ import { CProjectsSpellerComponent } from './components/c-projects/c-projects-sp
 import { PythonProjectsComponent } from './components/python-projects/python-projects.component';
 import { SqlProjectsComponent } from './components/sql-projects/sql-projects.component';
 import { FullstackComponent } from './components/fullstack/fullstack.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FullstackComponent } from './components/fullstack/fullstack.component';
     CProjectsSpellerComponent,
     PythonProjectsComponent,
     SqlProjectsComponent,
-    FullstackComponent
+    FullstackComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
