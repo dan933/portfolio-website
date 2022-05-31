@@ -10,10 +10,14 @@
   }
 }
 
-.example-container {
-  width: 100vw;
-  height: 100vh;
-  border: 1px solid rgb(255, 255, 255);
+#large-nav-bar{
+  position: fixed;
+}
+
+
+.drawer-container {
+  width: auto;
+  height: auto;
   background-color: white;
 }
 
@@ -40,8 +44,7 @@
 #logo
 {
   margin-left: 15px;
-  padding-top: 100px;
-  height: 170px;
+  height: 80px;
   padding-right: 20px;
 }
 
@@ -82,8 +85,10 @@
 
 #nav-bar-container
 {
-  margin-top: 250px;
+
+  display: flex;
   width: 100vw;
+  justify-content: right;
 }
 
 //submenu panel for projects
