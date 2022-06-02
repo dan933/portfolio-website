@@ -1,4 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { cardData } from 'src/assets/Data/overview-card-data';
+
+interface ICard {
+  title:string,
+  subtitle:string,
+  img: string,
+  caption: string
+  routeLink:string
+}
 
 @Component({
   selector: 'app-overview',
@@ -7,9 +16,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OverviewComponent implements OnInit {
 
+  cards: ICard[] = cardData;
+
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

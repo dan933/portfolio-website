@@ -20,26 +20,17 @@
 
   <div class="basic-grid">
 
-    <figure class="card">
-      <img class="img-medium-responsive border cursor-pointer" routerLink="/fullstack" routerLinkActive="active" src="../../assets/Images/fullstack/invoice-application/fullstack.png" alt="Invoice Application">
-    <figcaption class="caption">A fullstack invoicing application using Angular, C# and Microsoft SQL Server.</figcaption>
-    </figure>
-
-    <figure class="card">
-      <img class="img-medium-responsive border cursor-pointer" routerLink="/r-projects" routerLinkActive="active" src="../../assets/Images/overview-images/rideshare Project.jpg" alt="R Project">
-    <figcaption class="caption">A shiny app used to identify profitable areas and times for rideshare drivers. This app was A shiny app used to identify profitable areas and times for made with the R programming language and leaflet.</figcaption>
-    </figure>
-
-    <figure class="card">
-      <img class="img-medium-responsive border cursor-pointer" routerLink="/c-projects" src="../../assets/Images/overview-images/C-example-sepia.jpg" alt="C Language">
-      <figcaption class="caption">A C application that takes a photo and adds a filter to the picture.</figcaption>
-    </figure>
-    <figure class="card">
-      <img class="img-medium-responsive border cursor-pointer" routerLink="/sql-projects" src="../../assets/Images/overview-images/Access Example.jpg" alt="MS Access">
-      <figcaption class="caption">A Microsoft Access application to manage a companies invoice.</figcaption>
-    </figure>
-    <figure class="card">
-      <img class="img-medium-responsive border cursor-pointer" routerLink="/python-projects" src="../../assets/Images/overview-images/DNA Example.png" alt="Python">
-      <figcaption class="caption">A python program that returns the name of a person when there is a DNA match.</figcaption>
-    </figure>
+    <mat-card *ngFor="let card of cards" class="card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{card.title}}</mat-card-title>
+        <mat-card-subtitle>{{card.subtitle}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image class="cursor-pointer" routerLink={{card.routeLink}} src={{card.img}} alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          {{card.caption}}
+        </p>
+      </mat-card-content>
+    </mat-card>
   </div>
