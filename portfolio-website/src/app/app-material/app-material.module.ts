@@ -8,7 +8,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTabsModule } from '@angular/material/tabs';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+
 
 
 @NgModule({
@@ -21,7 +24,9 @@ import {MatCardModule} from '@angular/material/card';
     MatSidenavModule,
     MatExpansionModule,
     MatTabsModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   exports: [
     MatToolbarModule,
@@ -31,7 +36,9 @@ import {MatCardModule} from '@angular/material/card';
     MatSidenavModule,
     MatExpansionModule,
     MatTabsModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule
   ]
 })
 export class AppMaterialModule { }

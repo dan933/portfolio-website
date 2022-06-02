@@ -40,7 +40,6 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
     BrowserAnimationsModule,
     AppMaterialModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
