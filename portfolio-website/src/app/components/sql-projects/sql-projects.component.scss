@@ -1,5 +1,6 @@
 .mat-expansion-panel-header{
 
-  height: fit-content !important;
-  margin-top:10px;
+  height: max-content !important;
+  min-height: 50px;
+
 }
