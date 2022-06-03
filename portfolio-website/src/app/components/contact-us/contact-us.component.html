@@ -3,7 +3,7 @@
   <h1 class="heading-center">Contact</h1>
 
   <form class="flex-col" [formGroup]="messageFromGroup" (ngSubmit)="submitMessage()">
-    <label for="email" class="alert" *ngIf="!this.messageFromGroup.valid"> great success</label>
+    <!-- <label for="email" class="alert" *ngIf="!this.messageFromGroup.valid"> great success</label> -->
     <input id="email" type="text" placeholder="enter email" name="email" class="message-box" formControlName="email">
     <textarea name="message" id="message" rows="10" placeholder="enter message" class="message-box" name="message" formControlName="message"></textarea>
     <button mat-raised-button class="submit-button">Submit</button>
