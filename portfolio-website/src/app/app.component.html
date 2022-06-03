@@ -7,11 +7,11 @@
     <button class="nav-buttons" mat-button routerLink="/overview" routerLinkActive="active">Overview</button>
     <button mat-button class="nav-buttons" [matMenuTriggerFor]="menu">Projects</button>
     <mat-menu #menu="matMenu">
-      <button routerLink="/r-projects" routerLinkActive="active" mat-menu-item>R</button>
-      <button routerLink="/fullstack" routerLinkActive="active" mat-menu-item>Fullstack</button>
-      <button routerLink="/c-projects" routerLinkActive="active" mat-menu-item>C</button>
-      <button routerLink="/python-projects" routerLinkActive="active" mat-menu-item>Python</button>
-      <button mat-menu-item  routerLink="/sql-projects" routerLinkActive="active" class="sub-nav-buttons">SQL</button>
+      <button routerLink="/projects/r-projects" routerLinkActive="active" mat-menu-item>R</button>
+      <button routerLink="/projects/fullstack" routerLinkActive="active" mat-menu-item>Fullstack</button>
+      <button routerLink="/projects/c-projects" routerLinkActive="active" mat-menu-item>C</button>
+      <button routerLink="/projects/python-projects" routerLinkActive="active" mat-menu-item>Python</button>
+      <button mat-menu-item  routerLink="/projects/sql-projects" routerLinkActive="active" class="sub-nav-buttons">SQL</button>
     </mat-menu>
     <button class="nav-buttons" routerLink="/contact" routerLinkActive="active"  mat-button>Contact</button>
   </div>
@@ -31,11 +31,11 @@
     <br>
     <button (click)="toggle()" mat-button class="compact-nav-buttons">Projects</button>
     <div *ngIf="show" id="sub-menu-projects">
-      <button class="compact-sub-menu" routerLink="/r-projects" routerLinkActive="active" mat-menu-item>R</button>
-      <button class="compact-sub-menu" routerLink="/fullstack" routerLinkActive="active" mat-menu-item>Fullstack</button>
-      <button class="compact-sub-menu" routerLink="/c-projects" routerLinkActive="active" mat-menu-item>C</button>
-      <button class="compact-sub-menu" routerLink="/python-projects" routerLinkActive="active"mat-menu-item>Python</button>
-      <button class="compact-sub-menu" routerLink="/sql-projects" routerLinkActive="active" mat-menu-item>SQL</button>
+      <button class="compact-sub-menu" routerLink="/projects/r-projects" routerLinkActive="active" mat-menu-item>R</button>
+      <button class="compact-sub-menu" routerLink="/projects/fullstack" routerLinkActive="active" mat-menu-item>Fullstack</button>
+      <button class="compact-sub-menu" routerLink="/projects/c-projects" routerLinkActive="active" mat-menu-item>C</button>
+      <button class="compact-sub-menu" routerLink="/projects/python-projects" routerLinkActive="active"mat-menu-item>Python</button>
+      <button class="compact-sub-menu" routerLink="/projects/sql-projects" routerLinkActive="active" mat-menu-item>SQL</button>
     </div>
     <br *ngIf="!show">
     <button class="compact-nav-buttons" routerLink="/contact" routerLinkActive="active" mat-button>Contact</button>
