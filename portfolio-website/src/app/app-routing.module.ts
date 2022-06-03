@@ -16,15 +16,20 @@ import { SqlProjectsComponent } from './components/sql-projects/sql-projects.com
 
 const routes: Routes = [
   { path: 'overview', component: OverviewComponent },
-  { path: 'r-projects', component: RProjectsComponent },
-  { path: 'c-projects/credit', component: CProjectsCreditComponent },
-  { path: 'c-projects', component: CProjectsPictureFilterComponent },
-  { path: 'c-projects/substitution', component: CProjectsSubstitutionComponent },
-  { path: 'c-projects/recover', component: CProjectsRecoverComponent },
-  { path: 'c-projects/speller', component: CProjectsSpellerComponent },
-  { path: 'python-projects', component: PythonProjectsComponent },
-  { path: 'sql-projects', component: SqlProjectsComponent },
-  { path: 'fullstack', component: FullstackComponent },
+  {
+    path: 'projects',
+    children: [
+      { path: 'r-projects', component: RProjectsComponent },
+      { path: 'c-projects/credit', component: CProjectsCreditComponent },
+      { path: 'c-projects', component: CProjectsPictureFilterComponent },
+      { path: 'c-projects/substitution', component: CProjectsSubstitutionComponent },
+      { path: 'c-projects/recover', component: CProjectsRecoverComponent },
+      { path: 'c-projects/speller', component: CProjectsSpellerComponent },
+      { path: 'python-projects', component: PythonProjectsComponent },
+      { path: 'sql-projects', component: SqlProjectsComponent },
+      { path: 'fullstack', component: FullstackComponent },
+    ]
+  },
   { path: 'contact', component: ContactUsComponent },
   { path: '',   redirectTo: 'overview', pathMatch: 'full' },
 

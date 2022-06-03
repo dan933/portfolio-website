@@ -6,6 +6,12 @@
 }
 
 .contact-container{
+  text-align: center;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.contact-icons-container{
   margin-top: 30px;
   display: flex;
   flex-direction: row;
@@ -14,7 +20,7 @@
 }
 
 @media screen and ( max-width: 300px) {
-  .contact-container{
+  .contact-icons-container{
     flex-direction: column;
   }
 }

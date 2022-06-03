@@ -26,7 +26,7 @@
 
 <!-- compact nav-bar -->
 
-  <mat-drawer #drawer mode="over">
+  <mat-drawer #drawer mode="over" style="min-height:100vh !important;">
     <button class="compact-nav-buttons" mat-button routerLink="/overview" routerLinkActive="active">Overview</button>
     <br>
     <button (click)="toggle()" mat-button class="compact-nav-buttons">Projects</button>
@@ -42,7 +42,9 @@
   </mat-drawer>
 
 
+  <div style="min-height: 82.2vh;">
+    <router-outlet></router-outlet>
+  </div>
 
-<router-outlet></router-outlet>
 
 </mat-drawer-container>
