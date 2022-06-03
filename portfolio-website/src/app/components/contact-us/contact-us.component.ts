@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-us',
@@ -9,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 
 export class ContactUsComponent implements OnInit {
 
+  messageFromGroup = new FormGroup({
+    email:new FormControl(''),
+    message: new FormControl('')
+  });
+
+  submitMessage() {
+    console.log(this.messageFromGroup.value)
+  }
+
   constructor() { }
 
   ngOnInit(): void {
+
   }
+
+
 
 }

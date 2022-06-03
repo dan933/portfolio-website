@@ -2,9 +2,10 @@
 <div class="contact-container">
   <h1 class="heading-center">Contact</h1>
 
-  <form class="flex-col">
-    <input type="text" placeholder="enter email" class="message-box">
-    <textarea name="message" id="message" rows="10" placeholder="enter message" class="message-box"></textarea>
+  <form class="flex-col" [formGroup]="messageFromGroup" (ngSubmit)="submitMessage()">
+    <input type="text" placeholder="enter email" name="email" class="message-box" formControlName="email">
+    <textarea name="message" id="message" rows="10" placeholder="enter message" class="message-box" name="message" formControlName="message"></textarea>
+    <button mat-raised-button class="submit-button">Submit</button>
   </form>
   <p>Please feel free to contact me via email or checkout my GitHub 😊</p>
 

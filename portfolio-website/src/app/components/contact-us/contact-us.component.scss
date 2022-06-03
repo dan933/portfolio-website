@@ -5,6 +5,17 @@
   width: 100%;
 }
 
+.submit-button{
+  background-color: #004efe;
+  color: white;
+  margin-bottom: 10px;
+
+  &:hover{
+    background-color: #004cfebd;
+
+  }
+}
+
 .contact-container{
   text-align: center;
   margin-left: 15px;
