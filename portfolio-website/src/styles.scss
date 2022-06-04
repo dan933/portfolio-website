@@ -172,6 +172,7 @@ figcaption{
   display: grid;
   gap: 2.5rem;
   grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+  margin-bottom: 15px;
 }
 
 @media screen and (max-width: 394px) {
