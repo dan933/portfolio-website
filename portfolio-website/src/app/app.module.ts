@@ -20,6 +20,7 @@ import { PythonProjectsComponent } from './components/python-projects/python-pro
 import { SqlProjectsComponent } from './components/sql-projects/sql-projects.component';
 import { FullstackComponent } from './components/fullstack/fullstack.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { SubNavComponent } from './components/c-projects/sub-nav/sub-nav.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
     PythonProjectsComponent,
     SqlProjectsComponent,
     FullstackComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    SubNavComponent
   ],
   imports: [
     BrowserModule,

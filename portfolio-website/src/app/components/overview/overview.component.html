@@ -26,7 +26,9 @@
         <mat-card-title>{{card.title}}</mat-card-title>
         <mat-card-subtitle>{{card.subtitle}}</mat-card-subtitle>
       </mat-card-header>
-      <img mat-card-image class="cursor-pointer" routerLink={{card.routeLink}} src={{card.img}} alt="Photo of a Shiba Inu">
+      <a >
+        <img mat-card-image class="cursor-pointer" routerLink={{card.routeLink}} src={{card.img}} alt="Photo of a Shiba Inu">
+      </a>
       <mat-card-content>
         <p>
           {{card.caption}}
