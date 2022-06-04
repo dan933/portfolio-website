@@ -2,12 +2,20 @@
 <div class="contact-container">
   <h1 class="heading-center">Contact</h1>
 
-  <form class="flex-col" [formGroup]="messageFromGroup" (ngSubmit)="submitMessage()">
-    <!-- <label for="email" class="alert" *ngIf="!this.messageFromGroup.valid"> great success</label> -->
-    <input id="email" type="text" placeholder="enter email" name="email" class="message-box" formControlName="email">
-    <textarea name="message" id="message" rows="10" placeholder="enter message" class="message-box" name="message" formControlName="message"></textarea>
-    <button mat-raised-button class="submit-button">Submit</button>
+  <form
+    ngNoForm
+    class="flex-col"
+    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc18dF3ds8TMYPu5o0nHkIRut7_KltJ4dU9DJniihW0jjbNmg/formResponse"
+    method="post"
+  >
+
+  <!-- dnadistrictservices@gmail.com -->
+    <input  type="email" placeholder="Email" name="entry.1888783603" class="message-box" >
+    <textarea name="entry.287121295" type="text" placeholder="enter message" class="message-box" id=""></textarea>
+
+    <button type="submit" mat-raised-button class="submit-button">Submit</button>
   </form>
+
   <p>Please feel free to contact me via email or checkout my GitHub 😊</p>
 
   <div class="contact-icons-container">

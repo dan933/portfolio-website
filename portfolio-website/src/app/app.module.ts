@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 
 //angular materials module
 import { AppMaterialModule } from './app-material/app-material.module';
@@ -42,7 +42,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
     BrowserAnimationsModule,
     AppMaterialModule,
     ReactiveFormsModule,
-    FormsModule
+    HttpClientModule
   ],
   bootstrap: [AppComponent]
 })

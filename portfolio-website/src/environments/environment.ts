@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  notion: {
+    token: "secret_muTmiRzsEuNqmnABXRkenTmU1EbUPp8sNrZX4F0dO9o",
+    db:"62a93af9be6f47e3bf463ef09f8889e7"
+  }
 };
 
 /*
