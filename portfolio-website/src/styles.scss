@@ -3,6 +3,8 @@ body
   margin: 0;
 }
 
+
+
 div{
   button.nav-buttons{
     &:hover{
@@ -57,8 +59,14 @@ figcaption{
   }
 }
 
+li{
+  font-size: 20px;
+  line-height: 30px;
+}
+
 .logos
 {
+  margin-left: 10px;
   height: 70px;
   width: auto;
   align-self: center;

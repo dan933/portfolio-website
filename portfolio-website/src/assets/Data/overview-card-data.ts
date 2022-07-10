@@ -20,7 +20,7 @@ export const cardData: ICard[] = [
     title:"RideShare App",
     subtitle:"Stack: R, Shiny and Leaflet",
     img: "../../assets/Images/overview-images/rideshare Project.jpg",
-    caption: "A shiny app used to identify profitable areas and times for rideshare drivers. This app was A shiny app used to identify profitable areas and times for made with the R programming language and leaflet.",
+    caption: "A shiny app used to identify profitable areas and times for rideshare drivers.  The app was created with R programming language, leaflet and Shiny.",
     routeLink:"/projects/r-projects"
   },
   {
@@ -34,14 +34,14 @@ export const cardData: ICard[] = [
     title:"Access Invoice relational database",
     subtitle:"Stack: MS Access",
     img: "../../assets/Images/overview-images/Access Example.jpg",
-    caption: "A Microsoft Access application to manage a companies invoice.",
+    caption: "A Microsoft Access application to manage a company’s invoices.",
     routeLink:"/projects/sql-projects"
   },
   {
     title:"DNA Match",
     subtitle:"Stack: Python",
     img: "../../assets/Images/overview-images/DNA Example.png",
-    caption: "A python program that returns the name of a person when there is a DNA match.",
+    caption: "A Python program that returns the name of a person when there is a DNA match.",
     routeLink:"/projects/python-projects"
   },
 ]
