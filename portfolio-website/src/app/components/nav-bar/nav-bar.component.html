@@ -1,0 +1,15 @@
+<mat-toolbar color="primary" class="nav">
+  <div fxHide.xs class="normal-nav">
+    <img routerLink='/overview' class="nav-logo" src="../../../assets/Images/web-logo.png" alt="">
+    <button mat-flat-button color="primary" routerLink='/overview' routerLinkActive="active" class="nav-button">Overview</button>
+    <button mat-flat-button color="primary" routerLink='#' routerLinkActive="active" class="nav-button">Projects</button>
+    <button mat-flat-button color="primary" routerLink='/contact' routerLinkActive="active" class="nav-button">Contact</button>
+  </div>
+
+  <div fxHide.gt-xs class="compact-nav">
+    <button mat-icon-button (click)="onToggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <img class="nav-logo" src="../../../assets/Images/web-logo.png" alt="">
+  </div>
+</mat-toolbar>

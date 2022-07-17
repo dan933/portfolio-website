@@ -1,50 +1,14 @@
-<!-- large navbar -->
-<mat-drawer-container class="drawer-container" [hasBackdrop]="true">
-
-<mat-toolbar id="large-nav-bar">
-  <img id="logo" src="../assets/Images/web-logo.png">
-  <div id="nav-bar-container">
-    <button class="nav-buttons" mat-button routerLink="/overview" routerLinkActive="active">Overview</button>
-    <button mat-button class="nav-buttons" [matMenuTriggerFor]="menu">Projects</button>
-    <mat-menu #menu="matMenu">
-      <button routerLink="/projects/r-projects" routerLinkActive="active" mat-menu-item>R</button>
-      <button routerLink="/projects/fullstack" routerLinkActive="active" mat-menu-item>Fullstack</button>
-      <button routerLink="/projects/c-projects" routerLinkActive="active" mat-menu-item>C</button>
-      <button routerLink="/projects/python-projects" routerLinkActive="active" mat-menu-item>Python</button>
-      <button mat-menu-item  routerLink="/projects/sql-projects" routerLinkActive="active" class="sub-nav-buttons">SQL</button>
-    </mat-menu>
-    <button class="nav-buttons" routerLink="/contact" routerLinkActive="active"  mat-button>Contact</button>
+<div class="app-container">
+  <div style="height: 100%;">
+    <mat-sidenav-container>
+      <mat-sidenav #sidenav role="navigation">
+        <app-side-nav-list (sidenavClose)="sidenav.close()"></app-side-nav-list>
+      </mat-sidenav>
+      <mat-sidenav-content>
+        <app-nav-bar (sidenavToggle)="sidenav.toggle()"></app-nav-bar>
+        <div style="margin-top: 90px;"></div>
+        <router-outlet></router-outlet>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
   </div>
-</mat-toolbar>
-
-<mat-toolbar id="compact-nav-bar">
-    <button (click)="drawer.toggle()" mat-icon-button aria-label="Compact nav-bar">
-      <mat-icon>menu</mat-icon>
-    </button>
-  <img id="logo-compact" src="../assets/Images/web-logo.png">
-</mat-toolbar>
-
-<!-- compact nav-bar -->
-
-  <mat-drawer #drawer mode="over" style="position: fixed;">
-    <button class="compact-nav-buttons" mat-button routerLink="/overview" routerLinkActive="active">Overview</button>
-    <br>
-    <button (click)="toggle()" mat-button class="compact-nav-buttons">Projects</button>
-    <div *ngIf="show" id="sub-menu-projects">
-      <button class="compact-sub-menu" (click)="drawer.toggle()" routerLink="/projects/r-projects" routerLinkActive="active" mat-menu-item>R</button>
-      <button class="compact-sub-menu" (click)="drawer.toggle()" routerLink="/projects/fullstack" routerLinkActive="active" mat-menu-item>Fullstack</button>
-      <button class="compact-sub-menu" (click)="drawer.toggle()" routerLink="/projects/c-projects" routerLinkActive="active" mat-menu-item>C</button>
-      <button class="compact-sub-menu" (click)="drawer.toggle()" routerLink="/projects/python-projects" routerLinkActive="active"mat-menu-item>Python</button>
-      <button class="compact-sub-menu" (click)="drawer.toggle()" routerLink="/projects/sql-projects" routerLinkActive="active" mat-menu-item>SQL</button>
-    </div>
-    <br *ngIf="!show">
-    <button class="compact-nav-buttons" (click)="drawer.toggle()" routerLink="/contact" routerLinkActive="active" mat-button>Contact</button>
-  </mat-drawer>
-
-
-  <div style="min-height: 82.2vh;">
-    <router-outlet></router-outlet>
-  </div>
-
-
-</mat-drawer-container>
+</div>

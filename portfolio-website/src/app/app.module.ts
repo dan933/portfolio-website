@@ -7,8 +7,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+//layout module
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 //angular materials module
 import { AppMaterialModule } from './app-material/app-material.module';
+
 import { OverviewComponent } from './components/overview/overview.component';
 import { RProjectsComponent } from './components/r-projects/r-projects.component';
 import { CProjectsPictureFilterComponent } from './components/c-projects/c-projects-picture-filter/c-projects-picture-filter.component';
@@ -21,6 +25,8 @@ import { SqlProjectsComponent } from './components/sql-projects/sql-projects.com
 import { FullstackComponent } from './components/fullstack/fullstack.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { SubNavComponent } from './components/c-projects/sub-nav/sub-nav.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { SideNavListComponent } from './components/nav-bar/side-nav-list/side-nav-list.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +42,9 @@ import { SubNavComponent } from './components/c-projects/sub-nav/sub-nav.compone
     SqlProjectsComponent,
     FullstackComponent,
     ContactUsComponent,
-    SubNavComponent
+    SubNavComponent,
+    NavBarComponent,
+    SideNavListComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +52,8 @@ import { SubNavComponent } from './components/c-projects/sub-nav/sub-nav.compone
     BrowserAnimationsModule,
     AppMaterialModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FlexLayoutModule
   ],
   bootstrap: [AppComponent]
 })
