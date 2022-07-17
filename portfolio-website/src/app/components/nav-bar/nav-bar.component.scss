@@ -3,9 +3,15 @@
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: white;
-  min-width: 100%;
+  width: 100%;
   height: auto;
   position: fixed;
+
+  div{
+    button{
+      font-size: x-large;
+    }
+  }
 }
 
 .compact-nav{
@@ -16,17 +22,24 @@
 }
 
 .normal-nav{
-  display:flex;
-  align-items: center;
-  column-gap: 10px;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  column-gap: 4px;
+}
+
+.active{
+  background-color: #3f51b5 !important;
+  color: white !important;
 }
 
 .nav-logo{
+  margin-right: auto;
   margin-top: 5px;
   height:60px;
 }
 
-@media screen and(max-height:309px)  {
+@media screen and(max-width:169px)  {
   .nav-logo{
     width: 26px;
     height: auto;
@@ -36,10 +49,6 @@
 
 mat-toolbar{
   background-color: white !important;
-  .active{
-    background-color: #3f51b5;
-    color: white;
-  }
 
   button{
     background-color: white;

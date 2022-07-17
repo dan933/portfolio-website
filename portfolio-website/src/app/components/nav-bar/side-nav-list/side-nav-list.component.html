@@ -2,9 +2,23 @@
   <a mat-list-item routerLink="/overview" routerLinkActive="active" (click)="onSidenavClose()">
     <span class="side-nav-title">Overview</span>
   </a>
-  <a mat-list-item routerLink="#" routerLinkActive="active">
-    <span class="side-nav-title">Projects</span>
-  </a>
+  <mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Projects
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <button routerLink='/projects/r-projects' routerLinkActive="active" mat-menu-item (click)="onSidenavClose()">R</button>
+      <button routerLink='/projects/fullstack' routerLinkActive="active" mat-menu-item (click)="onSidenavClose()">Fullstack</button>
+      <button routerLink='/projects/c-projects' routerLinkActive="active" mat-menu-item (click)="onSidenavClose()">C</button>
+      <button routerLink='/projects/python-projects' routerLinkActive="active" mat-menu-item (click)="onSidenavClose()">Python</button>
+      <button routerLink='/projects/sql-projects' routerLinkActive="active" mat-menu-item (click)="onSidenavClose()">SQL</button>
+    </mat-expansion-panel>
+    </mat-accordion>
+  <!-- <a mat-list-item routerLink="#" routerLinkActive="active"> -->
+    <!-- <span class="side-nav-title">Projects</span> -->
+  <!-- </a> -->
   <a mat-list-item routerLink="/contact" routerLinkActive="active" (click)="onSidenavClose()">
     <span class="side-nav-title">Contact</span>
   </a>

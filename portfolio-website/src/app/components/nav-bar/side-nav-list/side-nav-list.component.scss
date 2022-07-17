@@ -6,15 +6,28 @@ mat-nav-list{
     padding-left: 8px;
   }
 
-  a{
+  button{
+    padding-left: 35px;
+  }
+}
+
+a{
     &:hover{
       background-color: lightblue;
     }
   }
 
-  .active{
-    background-color: lightblue;
-  }
+.mat-expansion-panel{
+  box-shadow: none !important;
+  border-radius: 0px;
+}
+
+::ng-deep .mat-expansion-panel-body {
+  padding: 0 !important;
+}
+
+.active{
+  background-color: lightblue;
 }
 
 
