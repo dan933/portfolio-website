@@ -168,8 +168,8 @@ li{
 //grid classes
 .card
 {
-  margin-top: 40px;
-  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   justify-self: start;
@@ -188,7 +188,6 @@ li{
 .basic-grid
 {
   display: grid;
-  gap: 2.5rem;
   grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
   margin-bottom: 15px;
 }
