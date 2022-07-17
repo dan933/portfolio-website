@@ -21,7 +21,7 @@ const routes: Routes = [
     children: [
       { path: 'r-projects', component: RProjectsComponent },
       { path: 'c-projects/credit', component: CProjectsCreditComponent },
-      { path: 'c-projects', component: CProjectsPictureFilterComponent },
+      { path: 'c-projects/picture', component: CProjectsPictureFilterComponent },
       { path: 'c-projects/substitution', component: CProjectsSubstitutionComponent },
       { path: 'c-projects/recover', component: CProjectsRecoverComponent },
       { path: 'c-projects/speller', component: CProjectsSpellerComponent },

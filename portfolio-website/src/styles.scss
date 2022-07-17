@@ -330,8 +330,8 @@ a{
   }
 }
 
-.active-subnav{
-  background-color: blue;
+.active-sub-nav{
+  background-color: darkblue !important;
 }
 
 
@@ -339,6 +339,7 @@ a{
 {
   background-color: #004efe;
   color: white;
+  width:90vw;
   border-radius: 5px;
   margin-top:10px;
   margin-bottom: 10px;

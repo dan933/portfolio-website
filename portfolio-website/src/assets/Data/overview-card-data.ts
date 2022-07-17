@@ -28,7 +28,7 @@ export const cardData: ICard[] = [
     subtitle:"Stack: C",
     img: "../../assets/Images/overview-images/C-example-sepia.jpg",
     caption: "A C application that takes a photo and adds a filter to the picture.",
-    routeLink:"/projects/c-projects"
+    routeLink:"/projects/c-projects/picture"
   },
   {
     title:"Access Invoice relational database",
