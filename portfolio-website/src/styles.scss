@@ -130,6 +130,12 @@ li{
   margin-right: 15px;
 }
 
+.container-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .text-container-center{
   margin: auto;
   width: 60%;
@@ -137,7 +143,7 @@ li{
   padding-right: 30px;
 }
 
-.container-center
+.heading-center
 {
   text-align: center;
   margin-left: 15px;
@@ -215,8 +221,8 @@ li{
 {
   margin-top: 5px;
   font-size: 25px;
-  width: fit-content;
   line-height: 1.3;
+  max-width: 700px;
 }
 
 //space between nav bar and router outlet
@@ -251,14 +257,13 @@ li{
   }
 }
 
-
-
-
-.header-left
-{
+h1{
   font-size: 40px !important;
   margin-bottom: 40px !important;
-  text-align: left !important;
+}
+
+figure{
+  margin:0;
 }
 
 .header-center{
