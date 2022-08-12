@@ -10,11 +10,18 @@ interface ICard {
 
 export const cardData: ICard[] = [
   {
+    title:"NBA App",
+    subtitle:"Stack: React, Sql Server and Entity Framework",
+    img: "../../assets/Images/fullstack/invoice-application/NBA-Application.png",
+    caption: "A full stack application users can login create and manage their NBA dream teams.",
+    routeLink:"/projects/nba-app"
+  },
+  {
     title:"Invoice App",
     subtitle:"Stack: Angular, Sql Server and Entity Framework",
     img: "../../assets/Images/fullstack/invoice-application/fullstack.png",
     caption: "An Invoice application that allows the user to create customers and invoices. The invoices can be downloaded as a pdf and can be marked as paid.",
-    routeLink:"/projects/fullstack"
+    routeLink:"/projects/invoice-app"
   },
   {
     title:"RideShare App",

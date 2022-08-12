@@ -1,20 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FullstackComponent } from './fullstack.component';
+import { NbaApplicationComponent } from './nba-application.component';
 
-describe('FullstackComponent', () => {
-  let component: FullstackComponent;
-  let fixture: ComponentFixture<FullstackComponent>;
+describe('NbaApplicationComponent', () => {
+  let component: NbaApplicationComponent;
+  let fixture: ComponentFixture<NbaApplicationComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FullstackComponent ]
+      declarations: [ NbaApplicationComponent ]
     })
     .compileComponents();
-  });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(FullstackComponent);
+    fixture = TestBed.createComponent(NbaApplicationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

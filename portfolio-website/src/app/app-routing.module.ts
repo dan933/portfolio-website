@@ -8,11 +8,12 @@ import { CProjectsCreditComponent } from './components/c-projects/c-projects-cre
 import { CProjectsSubstitutionComponent } from './components/c-projects/c-projects-substitution/c-projects-substitution.component';
 import { CProjectsRecoverComponent } from './components/c-projects/c-projects-recover/c-projects-recover.component';
 import { CProjectsSpellerComponent } from './components/c-projects/c-projects-speller/c-projects-speller.component';
-import { FullstackComponent } from './components/fullstack/fullstack.component';
+import { InvoiceAppComponent } from './components/fullstack/invoice-app/invoice-app.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
 import { PythonProjectsComponent } from './components/python-projects/python-projects.component';
 import { SqlProjectsComponent } from './components/sql-projects/sql-projects.component';
+import { NbaApplicationComponent } from './components/fullstack/nba-application/nba-application.component';
 
 const routes: Routes = [
   { path: 'overview', component: OverviewComponent },
@@ -27,7 +28,8 @@ const routes: Routes = [
       { path: 'c-projects/speller', component: CProjectsSpellerComponent },
       { path: 'python-projects', component: PythonProjectsComponent },
       { path: 'sql-projects', component: SqlProjectsComponent },
-      { path: 'fullstack', component: FullstackComponent },
+      { path: 'invoice-app', component: InvoiceAppComponent },
+      { path: 'nba-app', component: NbaApplicationComponent },
     ]
   },
   { path: 'contact', component: ContactUsComponent },

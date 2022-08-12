@@ -22,11 +22,12 @@ import { CProjectsRecoverComponent } from './components/c-projects/c-projects-re
 import { CProjectsSpellerComponent } from './components/c-projects/c-projects-speller/c-projects-speller.component';
 import { PythonProjectsComponent } from './components/python-projects/python-projects.component';
 import { SqlProjectsComponent } from './components/sql-projects/sql-projects.component';
-import { FullstackComponent } from './components/fullstack/fullstack.component';
+import { InvoiceAppComponent } from './components/fullstack/invoice-app/invoice-app.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { SubNavComponent } from './components/c-projects/sub-nav/sub-nav.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { SideNavListComponent } from './components/nav-bar/side-nav-list/side-nav-list.component';
+import { NbaApplicationComponent } from './components/fullstack/nba-application/nba-application.component';
 
 @NgModule({
   declarations: [
@@ -40,11 +41,12 @@ import { SideNavListComponent } from './components/nav-bar/side-nav-list/side-na
     CProjectsSpellerComponent,
     PythonProjectsComponent,
     SqlProjectsComponent,
-    FullstackComponent,
+    InvoiceAppComponent,
     ContactUsComponent,
     SubNavComponent,
     NavBarComponent,
-    SideNavListComponent
+    SideNavListComponent,
+    NbaApplicationComponent
   ],
   imports: [
     BrowserModule,
