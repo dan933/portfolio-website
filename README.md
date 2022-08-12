@@ -1,2 +1,2 @@
 # portfolio-website
-Portfolio website of projects I've worked on
+Portfolio website showcasing applications I have built and contributed to.
