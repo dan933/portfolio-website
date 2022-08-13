@@ -3,13 +3,6 @@ body
   margin: 0;
 }
 
-.card {
-  max-width: 927px;
-  background-color:rgba(0, 0, 128, 0.049);
-}
-
-
-
 div{
   button.nav-buttons{
     &:hover{
@@ -163,17 +156,6 @@ li{
   row-gap: 20px;
   display: flex;
   flex-direction: column;
-}
-
-//grid classes
-.card
-{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-self: start;
-  align-items:center;
 }
 
 .mat-icon.svg-medium-black{

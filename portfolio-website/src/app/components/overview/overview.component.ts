@@ -17,7 +17,6 @@ interface ICard {
   styleUrls: ['./overview.component.scss']
 })
 export class OverviewComponent implements OnInit {
-
   cards: ICard[] = cardData;
 
 
