@@ -3,6 +3,13 @@ body
   margin: 0;
 }
 
+.center-container-column{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
 .card{
   background-color:rgba(0, 0, 128, 0.049);
 }
