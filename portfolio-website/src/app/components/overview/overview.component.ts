@@ -6,7 +6,9 @@ interface ICard {
   subtitle:string,
   img: string,
   caption: string
-  routeLink:string
+  routeLink: string,
+  gitHubLink?:string,
+  IsGitHubButton:boolean
 }
 
 @Component({
