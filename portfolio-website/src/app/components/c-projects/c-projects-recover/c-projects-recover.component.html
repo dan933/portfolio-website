@@ -14,8 +14,11 @@
         old file and the process is repeated until the end of the file.
       </p>
     <mat-accordion>
-      <mat-expansion-panel class="source-code-large" (opened)="panelOpenState = true"
-                           (closed)="panelOpenState = false">
+      <mat-expansion-panel
+       class="source-code-large" (opened)="panelOpenState = true"
+       (closed)="panelOpenState = false"
+       expanded="true"
+       >
         <mat-expansion-panel-header>
           <mat-panel-title>
             Source Code
