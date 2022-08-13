@@ -24,10 +24,10 @@ import { PythonProjectsComponent } from './components/python-projects/python-pro
 import { SqlProjectsComponent } from './components/sql-projects/sql-projects.component';
 import { InvoiceAppComponent } from './components/fullstack/invoice-app/invoice-app.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
-import { SubNavComponent } from './components/c-projects/sub-nav/sub-nav.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { SideNavListComponent } from './components/nav-bar/side-nav-list/side-nav-list.component';
 import { NbaApplicationComponent } from './components/fullstack/nba-application/nba-application.component';
+import { CProjectsNavComponent } from './components/c-projects/c-projects-nav/c-projects-nav.component';
 
 @NgModule({
   declarations: [
@@ -43,10 +43,10 @@ import { NbaApplicationComponent } from './components/fullstack/nba-application/
     SqlProjectsComponent,
     InvoiceAppComponent,
     ContactUsComponent,
-    SubNavComponent,
     NavBarComponent,
     SideNavListComponent,
-    NbaApplicationComponent
+    NbaApplicationComponent,
+    CProjectsNavComponent
   ],
   imports: [
     BrowserModule,

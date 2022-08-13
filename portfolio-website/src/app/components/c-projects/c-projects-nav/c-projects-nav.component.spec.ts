@@ -1,20 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SubNavComponent } from './sub-nav.component';
+import { CProjectsNavComponent } from './c-projects-nav.component';
 
-describe('SubNavComponent', () => {
-  let component: SubNavComponent;
-  let fixture: ComponentFixture<SubNavComponent>;
+describe('CProjectsNavComponent', () => {
+  let component: CProjectsNavComponent;
+  let fixture: ComponentFixture<CProjectsNavComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SubNavComponent ]
+      declarations: [ CProjectsNavComponent ]
     })
     .compileComponents();
-  });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(SubNavComponent);
+    fixture = TestBed.createComponent(CProjectsNavComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
