@@ -1,7 +1,7 @@
 <div style="margin-top:150px;"></div>
 <div class="center-container-column">
-  <div>
-        <h1 class="header-left">SQL Projects</h1>
+  <div style="max-width: 90vw;">
+    <h1 class="header-left">SQL Projects</h1>
     <mat-tab-group style="min-height: 300px; max-width: 668px;">
       <mat-tab label="Invoicing Database">
         <div style="margin-top: 20px;"></div>
@@ -11,9 +11,12 @@
           relational database is used to keep track of Customers, invoices, and products.
         </p>
         <div class="basic-grid">
-            <img class="border img-medium-responsive" src="../../assets/Images/sql-projects/sql-projects-invoice/Access Example.jpg" alt="Original picture">
-            <img class="border img-medium-responsive" src="../../assets/Images/sql-projects/sql-projects-invoice/Access-form.jpg" alt="Blured picture">
-            <img class="border img-medium-responsive" src="../../assets/Images/sql-projects/sql-projects-invoice/Access-Relationships.jpg" alt="Blured picture">
+          <img class="border img-medium-responsive"
+            src="../../assets/Images/sql-projects/sql-projects-invoice/Access Example.jpg" alt="Original picture">
+          <img class="border img-medium-responsive"
+            src="../../assets/Images/sql-projects/sql-projects-invoice/Access-form.jpg" alt="Blured picture">
+          <img class="border img-medium-responsive"
+            src="../../assets/Images/sql-projects/sql-projects-invoice/Access-Relationships.jpg" alt="Blured picture">
         </div>
         <div style="margin-bottom: 20px;"></div>
 
@@ -22,15 +25,17 @@
         <div style="margin-top: 20px;"></div>
         <h1 class="header-left">Houses</h1>
         <p>
-          <a add target="_blank" href="https://cs50.harvard.edu/x/2020/psets/7/houses/#:~:text=Implement%20a%20program%20to%20import%20student%20data%20into%20a%20database,%20and%20then%20produce%20class%20rosters.$%20python%20import.py%20characters.csv$%20python%20roster.py%20GryffindorLavender%20Brown,%20born%201979Colin%20Creevey,%20born%201981Seamus%20Finnigan,%20born%201979Hermione%20Jean%20Granger,%20born%201979Neville%20Longbottom,%20born%201980Parvati%20Patil,%20born%201979Harry%20James%20Potter,%20born%201980Dean%20Thomas,%20born%201980">Houses</a>
-          is a python program that imports Student data into an SQL database and returns every student's name and year of birth in the database.
+          <a add target="_blank"
+            href="https://cs50.harvard.edu/x/2020/psets/7/houses/#:~:text=Implement%20a%20program%20to%20import%20student%20data%20into%20a%20database,%20and%20then%20produce%20class%20rosters.$%20python%20import.py%20characters.csv$%20python%20roster.py%20GryffindorLavender%20Brown,%20born%201979Colin%20Creevey,%20born%201981Seamus%20Finnigan,%20born%201979Hermione%20Jean%20Granger,%20born%201979Neville%20Longbottom,%20born%201980Parvati%20Patil,%20born%201979Harry%20James%20Potter,%20born%201980Dean%20Thomas,%20born%201980">Houses</a>
+          is a python program that imports Student data into an SQL database and returns every student's name and year
+          of birth in the database.
         </p>
         <div class="basic-grid" style="margin-bottom: 10px;">
-          <img class="border img-medium-responsive" src="../../assets/Images/sql-projects/sql-projects-houses/SQL-houses.jpg" alt="sql">
-      </div>
+          <img class="border img-medium-responsive"
+            src="../../assets/Images/sql-projects/sql-projects-houses/SQL-houses.jpg" alt="sql">
+        </div>
         <mat-accordion>
-          <mat-expansion-panel style="max-width: 800px;" class="source-code-large" (opened)="panelOpenState = true"
-                              (closed)="panelOpenState = false">
+          <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
             <mat-expansion-panel-header>
               <mat-panel-title>
                 import.py source code
@@ -96,8 +101,8 @@
             main()
                         '}}              </pre>
           </mat-expansion-panel>
-          <mat-expansion-panel style="max-width: 800px;" class="source-code-large" (opened)="panelOpenState = true"
-                              (closed)="panelOpenState = false">
+          <mat-expansion-panel class="source-code-large" (opened)="panelOpenState = true"
+            (closed)="panelOpenState = false">
             <mat-expansion-panel-header>
               <mat-panel-title>
                 roster.py source code
@@ -142,13 +147,16 @@
         <div style="margin-top: 20px;"></div>
         <h1 class="header-left">Movies</h1>
         <p>
-          The <a add target="_blank" href="https://cs50.harvard.edu/x/2020/psets/7/movies/#:~:text=rite%20SQL%20queries%20to%20answer%20questions%20about%20a%20database%20of%20movies.">Movies</a>
-          problem set required SQL queries that answered questions relating to <a add target="_blank" href="https://www.imdb.com/">IMDB</a> movies, actors and directors.
+          The <a add target="_blank"
+            href="https://cs50.harvard.edu/x/2020/psets/7/movies/#:~:text=rite%20SQL%20queries%20to%20answer%20questions%20about%20a%20database%20of%20movies.">Movies</a>
+          problem set required SQL queries that answered questions relating to <a add target="_blank"
+            href="https://www.imdb.com/">IMDB</a> movies, actors and directors.
         </p>
-        <img class="border img-large-responsive" src="../../assets/Images/sql-projects/sql-projects-movies/sql-movies.jpg" alt="sql database">
+        <img class="border img-large-responsive"
+          src="../../assets/Images/sql-projects/sql-projects-movies/sql-movies.jpg" alt="sql database">
         <mat-accordion>
           <mat-expansion-panel class="source-code-large-flex" (opened)="panelOpenState = true"
-                              (closed)="panelOpenState = false">
+            (closed)="panelOpenState = false">
             <mat-expansion-panel-header>
               <mat-panel-title>
                 List the titles of all movies released in 2008
@@ -162,7 +170,7 @@
               '}}              </pre>
           </mat-expansion-panel>
           <mat-expansion-panel class="source-code-large-flex" (opened)="panelOpenState = true"
-                              (closed)="panelOpenState = false">
+            (closed)="panelOpenState = false">
             <mat-expansion-panel-header>
               <mat-panel-title>
                 Determine the birth year of Emma Stone
@@ -176,7 +184,7 @@
               '}}              </pre>
           </mat-expansion-panel>
           <mat-expansion-panel class="source-code-large-flex" (opened)="panelOpenState = true"
-                              (closed)="panelOpenState = false">
+            (closed)="panelOpenState = false">
             <mat-expansion-panel-header>
               <mat-panel-title>
                 List the titles of all movies with a release date on or after 2018, in alphabetical order
@@ -191,7 +199,7 @@
               '}}              </pre>
           </mat-expansion-panel>
           <mat-expansion-panel class="source-code-large-flex" (opened)="panelOpenState = true"
-                              (closed)="panelOpenState = false">
+            (closed)="panelOpenState = false">
             <mat-expansion-panel-header>
               <mat-panel-title>
                 Determine the number of movies with an IMDb rating of 10.0
@@ -205,7 +213,7 @@
               '}}              </pre>
           </mat-expansion-panel>
           <mat-expansion-panel class="source-code-large-flex" (opened)="panelOpenState = true"
-                              (closed)="panelOpenState = false">
+            (closed)="panelOpenState = false">
             <mat-expansion-panel-header>
               <mat-panel-title>
                 list the titles and release years of all Harry Potter movies, in chronological order
@@ -220,10 +228,11 @@
               "}}              </pre>
           </mat-expansion-panel>
           <mat-expansion-panel class="source-code-large-flex" (opened)="panelOpenState = true"
-                              (closed)="panelOpenState = false">
+            (closed)="panelOpenState = false">
             <mat-expansion-panel-header>
               <mat-panel-title>
-                List all movies released in 2010 and their ratings, ordered by rating. For movies with the same rating, order them alphabetically by title
+                List all movies released in 2010 and their ratings, ordered by rating. For movies with the same rating,
+                order them alphabetically by title
               </mat-panel-title>
             </mat-expansion-panel-header>
             <pre style="font-size: 1rem; overflow: auto;">
@@ -236,7 +245,7 @@
               '}}              </pre>
           </mat-expansion-panel>
           <mat-expansion-panel class="source-code-large-flex" (opened)="panelOpenState = true"
-                              (closed)="panelOpenState = false">
+            (closed)="panelOpenState = false">
             <mat-expansion-panel-header>
               <mat-panel-title>
                 List the names of all people who starred in Toy Story
@@ -252,7 +261,7 @@
               '}}              </pre>
           </mat-expansion-panel>
           <mat-expansion-panel class="source-code-large-flex" (opened)="panelOpenState = true"
-                              (closed)="panelOpenState = false">
+            (closed)="panelOpenState = false">
             <mat-expansion-panel-header>
               <mat-panel-title>
                 List the names of all people who starred in a movie released in 2004, ordered by birth year
@@ -271,7 +280,7 @@
               '}}              </pre>
           </mat-expansion-panel>
           <mat-expansion-panel class="source-code-large-flex" (opened)="panelOpenState = true"
-                              (closed)="panelOpenState = false">
+            (closed)="panelOpenState = false">
             <mat-expansion-panel-header>
               <mat-panel-title>
                 List the names of all people who have directed a movie that received a rating of at least 9.0
@@ -290,10 +299,11 @@
               '}}              </pre>
           </mat-expansion-panel>
           <mat-expansion-panel class="source-code-large-flex" (opened)="panelOpenState = true"
-                              (closed)="panelOpenState = false">
+            (closed)="panelOpenState = false">
             <mat-expansion-panel-header>
               <mat-panel-title>
-                List the titles of the five highest rated movies (in order) that Chadwick Boseman starred in, starting with the highest rated
+                List the titles of the five highest rated movies (in order) that Chadwick Boseman starred in, starting
+                with the highest rated
               </mat-panel-title>
             </mat-expansion-panel-header>
             <pre style="font-size: 1rem; overflow: auto;">
@@ -310,7 +320,7 @@
               '}}              </pre>
           </mat-expansion-panel>
           <mat-expansion-panel class="source-code-large-flex" (opened)="panelOpenState = true"
-                              (closed)="panelOpenState = false">
+            (closed)="panelOpenState = false">
             <mat-expansion-panel-header>
               <mat-panel-title>
                 List the titles of all movies in which both Johnny Depp and Helena Bonham Carter starred
@@ -328,7 +338,7 @@
               '}}              </pre>
           </mat-expansion-panel>
           <mat-expansion-panel class="source-code-large-flex" (opened)="panelOpenState = true"
-                              (closed)="panelOpenState = false">
+            (closed)="panelOpenState = false">
             <mat-expansion-panel-header>
               <mat-panel-title>
                 List the names of all people who starred in a movie in which Kevin Bacon also starred
@@ -357,44 +367,54 @@
         <div style="margin-top: 20px;"></div>
         <h1 class="header-left">Finance</h1>
 
-          <div class="basic-grid">
-            <img class="border img-medium-responsive card" src="../../assets/Images/sql-projects/sql-projects-finance/finance-history.jpg" alt="Original picture">
-            <img class="border img-medium-responsive card" src="../../assets/Images/sql-projects/sql-projects-finance/finance-register.jpg" alt="Blured picture">
-            <img class="border img-medium-responsive card" src="../../assets/Images/sql-projects/sql-projects-finance/finance-index.jpg" alt="Blured picture">
-          </div>
-          <div style="margin-bottom: 10px;"></div>
-          <p>
-            <a target="_blank" href="https://cs50.harvard.edu/x/2020/tracks/web/finance/">Finance</a>
-            is a python application it allows users to register an account and login. The application is connected to a SQL database,
-            that stores usernames and passwords (in the form of a hash for security reasons). The purpose of this application is to allow
-            users to lookup stock prices, buy and sell stocks. The SQL database stores the users purchases and sales. It keeps track of
-            the stocks the user currently holds along with their cash balance.
-          </p>
-          <h2>The finance problem set required:</h2>
-          <ul>
-            <li>A register page for users that connects to a SQL database and inserts user information into the database.</li>
-            <li>A quote page for users that are logged in to find the current price of a stock symbol.</li>
-            <li>
-              A buy page for users to buy stocks if the user had enough money in their account and the user didn't enter a
-              negative number of units in the form; if these conditions are met then the SQL database will be updated,
-              if not the application returns an apology message.
-            </li>
-            <li>
-              An index page which shows the logged in user's Cash Balance and the value of the stocks they currently own.
-              This information is extracted from the SQL database.
-            </li>
-            <li>
-              A sell page for users to sell stocks if they own an amount less than or equal to the units they want to sell;
-              if these conditions are met the SQL database, if not the application returns an apology message.
-            </li>
-            <li>
-              A history page which shows all of the users transaction history including timestamp of when the event happened.
-            </li>
-            <li>
-              A personal touch for this project I chose to allow the user to deposit more cash into their account which updates
-              their cash in the SQL database.
-            </li>
-          </ul>
+        <div class="basic-grid">
+          <img class="border img-medium-responsive card"
+            src="../../assets/Images/sql-projects/sql-projects-finance/finance-history.jpg" alt="Original picture">
+          <img class="border img-medium-responsive card"
+            src="../../assets/Images/sql-projects/sql-projects-finance/finance-register.jpg" alt="Blured picture">
+          <img class="border img-medium-responsive card"
+            src="../../assets/Images/sql-projects/sql-projects-finance/finance-index.jpg" alt="Blured picture">
+        </div>
+        <div style="margin-bottom: 10px;"></div>
+        <p>
+          <a target="_blank" href="https://cs50.harvard.edu/x/2020/tracks/web/finance/">Finance</a>
+          is a python application it allows users to register an account and login. The application is connected to a
+          SQL database,
+          that stores usernames and passwords (in the form of a hash for security reasons). The purpose of this
+          application is to allow
+          users to lookup stock prices, buy and sell stocks. The SQL database stores the users purchases and sales. It
+          keeps track of
+          the stocks the user currently holds along with their cash balance.
+        </p>
+        <h2>The finance problem set required:</h2>
+        <ul>
+          <li>A register page for users that connects to a SQL database and inserts user information into the database.
+          </li>
+          <li>A quote page for users that are logged in to find the current price of a stock symbol.</li>
+          <li>
+            A buy page for users to buy stocks if the user had enough money in their account and the user didn't enter a
+            negative number of units in the form; if these conditions are met then the SQL database will be updated,
+            if not the application returns an apology message.
+          </li>
+          <li>
+            An index page which shows the logged in user's Cash Balance and the value of the stocks they currently own.
+            This information is extracted from the SQL database.
+          </li>
+          <li>
+            A sell page for users to sell stocks if they own an amount less than or equal to the units they want to
+            sell;
+            if these conditions are met the SQL database, if not the application returns an apology message.
+          </li>
+          <li>
+            A history page which shows all of the users transaction history including timestamp of when the event
+            happened.
+          </li>
+          <li>
+            A personal touch for this project I chose to allow the user to deposit more cash into their account which
+            updates
+            their cash in the SQL database.
+          </li>
+        </ul>
         <div style="margin-bottom: 20px;"></div>
       </mat-tab>
     </mat-tab-group>
