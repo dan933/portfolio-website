@@ -28,6 +28,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { SideNavListComponent } from './components/nav-bar/side-nav-list/side-nav-list.component';
 import { NbaApplicationComponent } from './components/fullstack/nba-application/nba-application.component';
 import { CProjectsNavComponent } from './components/c-projects/c-projects-nav/c-projects-nav.component';
+import { CProjectsComponent } from './components/c-projects/c-projects/c-projects.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { CProjectsNavComponent } from './components/c-projects/c-projects-nav/c-
     NavBarComponent,
     SideNavListComponent,
     NbaApplicationComponent,
-    CProjectsNavComponent
+    CProjectsNavComponent,
+    CProjectsComponent
   ],
   imports: [
     BrowserModule,

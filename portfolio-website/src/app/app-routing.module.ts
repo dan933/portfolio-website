@@ -14,6 +14,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { PythonProjectsComponent } from './components/python-projects/python-projects.component';
 import { SqlProjectsComponent } from './components/sql-projects/sql-projects.component';
 import { NbaApplicationComponent } from './components/fullstack/nba-application/nba-application.component';
+import { CProjectsComponent } from './components/c-projects/c-projects/c-projects.component';
 
 const routes: Routes = [
   { path: 'overview', component: OverviewComponent },
@@ -21,24 +22,31 @@ const routes: Routes = [
     path: 'projects',
     children: [
       { path: 'r-projects', component: RProjectsComponent },
-      { path: 'c-projects/credit', component: CProjectsCreditComponent },
-      { path: 'c-projects/picture', component: CProjectsPictureFilterComponent },
-      { path: 'c-projects/substitution', component: CProjectsSubstitutionComponent },
-      { path: 'c-projects/recover', component: CProjectsRecoverComponent },
-      { path: 'c-projects/speller', component: CProjectsSpellerComponent },
+      {
+        path: 'c-projects',
+        component: CProjectsComponent,
+        children: [
+          { path: 'credit', component: CProjectsCreditComponent },
+          { path: 'picture', component: CProjectsPictureFilterComponent },
+          { path: 'substitution', component: CProjectsSubstitutionComponent },
+          { path: 'recover', component: CProjectsRecoverComponent },
+          { path: 'speller', component: CProjectsSpellerComponent },
+        ],
+      },
       { path: 'python-projects', component: PythonProjectsComponent },
       { path: 'sql-projects', component: SqlProjectsComponent },
       { path: 'invoice-app', component: InvoiceAppComponent },
       { path: 'nba-app', component: NbaApplicationComponent },
-    ]
+    ],
   },
   { path: 'contact', component: ContactUsComponent },
-  { path: '',   redirectTo: 'overview', pathMatch: 'full' },
-
+  { path: '', redirectTo: 'overview', pathMatch: 'full' },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration:'enabled'})],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' }),
+  ],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

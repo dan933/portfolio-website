@@ -1,26 +1,28 @@
-<div style="margin-bottom: 150px;"></div>
 <div class="container container-center">
   <div>
-    <h1>C Projects</h1>
-    <app-c-projects-nav></app-c-projects-nav>
-
     <h2 class="header2-left">Substitution</h2>
     <div style="max-width: 700px; width:90vw;">
       <figure>
-        <img class="border img-medium-responsive" src="../../../assets/Images/cprojects-substitution/c-substitution.jpg" alt="substitution picture">
+        <img class="border img-medium-responsive" src="../../../assets/Images/cprojects-substitution/c-substitution.jpg"
+          alt="substitution picture">
         <figcaption class="caption" style="max-width: 700px;">
-          <a target="_blank" href="https://cs50.harvard.edu/x/2020/psets/2/substitution/">Substitution</a> is a C program that takes plain text input from
-          the user and implements a substitution cipher to encode the message. The substitution cipher is chosen by the user.
-          The substitution cipher must contain every letter of the alphabet only once. The cipher text does not change numbers however capitalisation is kept.
-          The program stores the user's substitution cipher in an array and then runs a series of checks to ensure it is a valid key,
-          using if statements nested inside for loops. The cipher text is not affected by whether the substitution cipher is capitalised or not.
-          The program uses ASCII values to identify whether the plaintext is capital or lower case. If the ASCII code is between 97 and 122 then the
+          <a target="_blank" href="https://cs50.harvard.edu/x/2020/psets/2/substitution/">Substitution</a> is a C
+          program that takes plain text input from
+          the user and implements a substitution cipher to encode the message. The substitution cipher is chosen by the
+          user.
+          The substitution cipher must contain every letter of the alphabet only once. The cipher text does not change
+          numbers however capitalisation is kept.
+          The program stores the user's substitution cipher in an array and then runs a series of checks to ensure it is
+          a valid key,
+          using if statements nested inside for loops. The cipher text is not affected by whether the substitution
+          cipher is capitalised or not.
+          The program uses ASCII values to identify whether the plaintext is capital or lower case. If the ASCII code is
+          between 97 and 122 then the
           letter is lowercase. If the ACII code is between 65 and 90 then the letter is uppercase.
         </figcaption>
       </figure>
       <mat-accordion>
-        <mat-expansion-panel class="source-code" (opened)="panelOpenState = true"
-                             (closed)="panelOpenState = false">
+        <mat-expansion-panel class="source-code" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
           <mat-expansion-panel-header>
             <mat-panel-title>
               Source Code
@@ -195,5 +197,3 @@
 
   <div style="margin-bottom: 20px;"></div>
 </div>
-
-

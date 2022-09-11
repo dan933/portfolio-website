@@ -1,30 +1,30 @@
-<div style="margin-top:150px;"></div>
 <div class="container container-center">
   <div>
-    <h1>C Projects</h1>
-    <app-c-projects-nav></app-c-projects-nav>
     <h2 class="header2-left">Picture Filter</h2>
     <div class="description">
       <p class="left">
-        The <a target="_blank" href="https://cs50.harvard.edu/x/2020/psets/4/filter/less/">picture</a> filter project was part of Harvard's CS50 course problem set four.
+        The <a target="_blank" href="https://cs50.harvard.edu/x/2020/psets/4/filter/less/">picture</a> filter project
+        was part of Harvard's CS50 course problem set four.
         The program takes a .bmp file as an input and returns an output file with the user's desired filter.
-        My job in this problem set was to create the part of the program that manipulates the pixels and returns the desired filter.
+        My job in this problem set was to create the part of the program that manipulates the pixels and returns the
+        desired filter.
       </p>
       <mat-tab-group style="min-height: 300px; max-width: 668px;" #matTabGroup (selectedTabChange)="onMatTabChanged();">
         <mat-tab label="Grayscale">
           <div style="margin-top: 20px;"></div>
           <h1 class="header-left">Grayscale</h1>
           <figure>
-            <img class="border img-medium-responsive" src="../../../assets/Images/cprojects-picture-filters/c-example-grayscale.jpg" alt="grayscale picture">
+            <img class="border img-medium-responsive"
+              src="../../../assets/Images/cprojects-picture-filters/c-example-grayscale.jpg" alt="grayscale picture">
             <figcaption class="caption" style="max-width: 700px;">
               To transform an image to grey the red, green, and blue values in the pixel must be the same.
               To achieve this, I used a nested for loop to iterate over every pixel captured the red, green,
-              and blue values and calculated the average of that pixel. I then assigned that value to the red, green, and blue values in that pixel.
+              and blue values and calculated the average of that pixel. I then assigned that value to the red, green,
+              and blue values in that pixel.
             </figcaption>
           </figure>
           <mat-accordion>
-            <mat-expansion-panel class="source-code" (opened)="panelOpenState = true"
-                                 (closed)="panelOpenState = false">
+            <mat-expansion-panel class="source-code" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
               <mat-expansion-panel-header>
                 <mat-panel-title>
                   Source Code
@@ -71,7 +71,8 @@
           <div style="margin-top: 20px;"></div>
           <h1 class="header-left">Sepia</h1>
           <figure>
-            <img class="border img-medium-responsive" src="../../../assets/Images/cprojects-picture-filters/C-example-sepia.jpg" alt="sepia picture">
+            <img class="border img-medium-responsive"
+              src="../../../assets/Images/cprojects-picture-filters/C-example-sepia.jpg" alt="sepia picture">
             <figcaption class="caption" style="max-width: 700px;">
               To transform a picture to sepia there is a specific formula to get sepia red,
               sepia green and sepia blue.
@@ -83,7 +84,7 @@
           </figure>
           <mat-accordion>
             <mat-expansion-panel style="max-width: 800px;" class="source-code" (opened)="panelOpenState = true"
-                                 (closed)="panelOpenState = false">
+              (closed)="panelOpenState = false">
               <mat-expansion-panel-header>
                 <mat-panel-title>
                   Source Code
@@ -160,20 +161,24 @@
           <h1>Reflect</h1>
 
 
-            <div class="basic-grid" style="max-width: 700px; width:90vw;">
-              <figure>
-              <img class="border img-medium-responsive" src="../../../assets/Images/cprojects-picture-filters/reflect-original.jpg" alt="Original picture">
-              <img class="border img-medium-responsive" src="../../../assets/Images/cprojects-picture-filters/reflect.jpg" alt="Reflection picture">
+          <div class="basic-grid" style="max-width: 700px; width:90vw;">
+            <figure>
+              <img class="border img-medium-responsive"
+                src="../../../assets/Images/cprojects-picture-filters/reflect-original.jpg" alt="Original picture">
+              <img class="border img-medium-responsive"
+                src="../../../assets/Images/cprojects-picture-filters/reflect.jpg" alt="Reflection picture">
               <figcaption class="caption" style="max-width: 700px;">
-                This filter creates a mirror reflection of the original image. It does this by swapping the pixels in each
-                half of the image using a nested for loop and temporary variables to store the red green and blue pixels,
+                This filter creates a mirror reflection of the original image. It does this by swapping the pixels in
+                each
+                half of the image using a nested for loop and temporary variables to store the red green and blue
+                pixels,
                 while the swap occurs.
               </figcaption>
             </figure>
-            </div>
+          </div>
           <mat-accordion>
             <mat-expansion-panel class="source-code-large-flex" (opened)="panelOpenState = true"
-                                 (closed)="panelOpenState = false">
+              (closed)="panelOpenState = false">
               <mat-expansion-panel-header>
                 <mat-panel-title>
                   Source Code
@@ -214,18 +219,22 @@
           <div style="margin-top: 20px;"></div>
           <h1 class="header-left">Blur</h1>
 
-            <div class="basic-grid">
-              <figure>
-              <img class="border img-medium-responsive" src="../../../assets/Images/cprojects-picture-filters/blur-original.jpg" alt="Original picture">
-              <img class="border img-medium-responsive" src="../../../assets/Images/cprojects-picture-filters/blur.jpg" alt="Blured picture">
+          <div class="basic-grid">
+            <figure>
+              <img class="border img-medium-responsive"
+                src="../../../assets/Images/cprojects-picture-filters/blur-original.jpg" alt="Original picture">
+              <img class="border img-medium-responsive" src="../../../assets/Images/cprojects-picture-filters/blur.jpg"
+                alt="Blured picture">
               <figcaption class="caption" style="max-width: 700px;">
-                The blur filter works by taking the average of the red, green, and blue in the surrounding pixels. The result is stored in an array, once all the values are calculated, the image's pixels are stored to that value.
+                The blur filter works by taking the average of the red, green, and blue in the surrounding pixels. The
+                result is stored in an array, once all the values are calculated, the image's pixels are stored to that
+                value.
               </figcaption>
             </figure>
-            </div>
+          </div>
           <mat-accordion>
             <mat-expansion-panel class="source-code-large-flex" (opened)="panelOpenState = true"
-                                 (closed)="panelOpenState = false">
+              (closed)="panelOpenState = false">
               <mat-expansion-panel-header>
                 <mat-panel-title>
                   Source Code

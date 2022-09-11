@@ -1,24 +1,24 @@
-<div style="margin-bottom: 150px;"></div>
 <div class="container container-center">
   <div>
-    <h1>C Projects</h1>
-    <app-c-projects-nav></app-c-projects-nav>
-
     <h2 class="header2-left">Speller</h2>
     <div class="description">
       <figure>
-        <img class="border img-medium-responsive" src="../../../assets/Images/cprojects-speller/c-speller.jpg" alt="Credit picture">
+        <img class="border img-medium-responsive" src="../../../assets/Images/cprojects-speller/c-speller.jpg"
+          alt="Credit picture">
         <figcaption class="caption" style="max-width: 700px;">
-          <a target="_blank" href="https://cs50.harvard.edu/x/2020/psets/5/speller/">Speller</a> is a program that spellchecks a text file using a dictionary that the user gives to the program.
+          <a target="_blank" href="https://cs50.harvard.edu/x/2020/psets/5/speller/">Speller</a> is a program that
+          spellchecks a text file using a dictionary that the user gives to the program.
           The dictionary is stored in a hash table each word in the dictionary is run through a hash function which
-          determines the words index in the hash table. If a word already exists at that index, then a linked list is created,
-          and the word is added to that linked list. A hash table speeds up the search process instead of searching the entire
-          array linearly. The hash function can jump to the index location where the word will be if it exists in the dictionary.
+          determines the words index in the hash table. If a word already exists at that index, then a linked list is
+          created,
+          and the word is added to that linked list. A hash table speeds up the search process instead of searching the
+          entire
+          array linearly. The hash function can jump to the index location where the word will be if it exists in the
+          dictionary.
         </figcaption>
       </figure>
       <mat-accordion>
-        <mat-expansion-panel class="source-code" (opened)="panelOpenState = true"
-                             (closed)="panelOpenState = false">
+        <mat-expansion-panel class="source-code" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
           <mat-expansion-panel-header>
             <mat-panel-title>
               Source Code
