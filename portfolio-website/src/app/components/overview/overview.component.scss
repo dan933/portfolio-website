@@ -1,54 +1,75 @@
-.card{
+.card {
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 10px;
   position: inherit;
-  background-color:rgba(0, 0, 128, 0.049);
+  background-color: rgba(0, 0, 128, 0.049);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  &:hover{
-    box-shadow: 0 0 11px rgba(33,33,33,.2);
+  &:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .2);
     transition: all 1s;
   }
 
-  .thumbnail{
+  .thumbnail {
     padding-top: 10px;
-    width:300px;
-    max-width:fit-content;
+    width: 300px;
+    max-width: fit-content;
     margin-left: auto;
     margin-right: auto;
   }
 }
 
-.profile-pic{
+.profile-pic {
   margin-top: 15px;
   margin-bottom: 15px;
   width: auto;
   max-width: 200px;
   border-radius: 50%;
 }
-.about-me-container
-{
+
+.about-me-container {
   text-align: center;
   margin-left: 15px;
   margin-right: 15px;
+
+  .video {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+  }
+
+  .video-button {
+    transform: scale(3);
+    opacity: 0.5;
+    border: medium none;
+    color: #fff;
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+  }
 }
 
-.basic-grid
-{
+.basic-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   margin-bottom: 15px;
 }
 
 @media screen and (max-width: 394px) {
-  .basic-grid
-  {
+  .basic-grid {
     display: grid;
     gap: 2.5rem;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
 }

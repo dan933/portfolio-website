@@ -1,25 +1,85 @@
-<mat-toolbar color="primary" class="nav">
-  <div fxHide.xs class="normal-nav">
-    <img class="nav-logo cursor-pointer" src="../../../assets/Images/web-logo.png" alt="" routerLink='/overview'>
+<mat-toolbar
+  color="primary"
+  class="nav"
+>
+  <div
+    fxHide.xs
+    class="normal-nav"
+  >
+    <img
+      class="nav-logo cursor-pointer"
+      src="../../../assets/Images/web-logo.png"
+      alt=""
+      routerLink='/overview'
+    >
 
-    <button mat-flat-button color="primary" routerLink='/overview' routerLinkActive="active">Overview</button>
-    <button mat-flat-button color="primary" [matMenuTriggerFor]="projectMenu">Projects</button>
+    <button
+      mat-flat-button
+      color="primary"
+      routerLink='/overview'
+      routerLinkActive="active"
+    >Overview</button>
+    <button
+      mat-flat-button
+      color="primary"
+      [matMenuTriggerFor]="projectMenu"
+    >Projects</button>
     <mat-menu #projectMenu="matMenu">
-      <button routerLink='/projects/r-projects' routerLinkActive="active" mat-menu-item>R</button>
-      <button routerLink='/projects/nba-app' routerLinkActive="active" mat-menu-item>NBA App</button>
-      <button routerLink='/projects/invoice-app' routerLinkActive="active" mat-menu-item>Invoice App</button>
-      <button routerLink='/projects/c-projects/picture' routerLinkActive="active" mat-menu-item>C</button>
-      <button routerLink='/projects/python-projects' routerLinkActive="active" mat-menu-item>Python</button>
-      <button routerLink='/projects/sql-projects' routerLinkActive="active" mat-menu-item>SQL</button>
+      <button
+        routerLink='/projects/r-projects'
+        routerLinkActive="active"
+        mat-menu-item
+      >R</button>
+      <button
+        routerLink='/projects/nba-app'
+        routerLinkActive="active"
+        mat-menu-item
+      >NBA App</button>
+      <button
+        routerLink='/projects/invoice-app'
+        routerLinkActive="active"
+        mat-menu-item
+      >Invoice App</button>
+      <button
+        routerLink='/projects/c-projects/picture'
+        routerLinkActive="active"
+        mat-menu-item
+      >C</button>
+      <button
+        routerLink='/projects/python-projects'
+        routerLinkActive="active"
+        mat-menu-item
+      >Python</button>
+      <button
+        routerLink='/projects/sql-projects'
+        routerLinkActive="active"
+        mat-menu-item
+      >SQL</button>
     </mat-menu>
 
-    <button mat-flat-button color="primary" routerLink='/contact' routerLinkActive="active">Contact</button>
+    <button
+      mat-flat-button
+      color="primary"
+      routerLink='/contact'
+      routerLinkActive="active"
+    >Contact</button>
   </div>
 
-  <div fxHide.gt-xs class="compact-nav">
-    <button mat-icon-button (click)="onToggleSidenav()">
+  <div
+    fxHide.gt-xs
+    class="compact-nav"
+  >
+    <button
+      mat-icon-button
+      (click)="onToggleSidenav()"
+    >
       <mat-icon>menu</mat-icon>
     </button>
-    <img class="nav-logo" src="../../../assets/Images/web-logo.png" alt="">
+    <img
+      class="nav-logo"
+      src="../../../assets/Images/web-logo.png"
+      alt=""
+      routerLink='/overview'
+    >
   </div>
 </mat-toolbar>
